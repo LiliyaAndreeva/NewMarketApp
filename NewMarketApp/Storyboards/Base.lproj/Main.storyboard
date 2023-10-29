@@ -108,7 +108,7 @@
         <!--Profile-->
         <scene sceneID="lWy-F7-Flp">
             <objects>
-                <viewController id="3Kf-5o-MtJ" customClass="ProfileViewController" customModule="MarketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3Kf-5o-MtJ" customClass="ProfileViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oBv-MG-heI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,7 @@
         <!--Login View Controller-->
         <scene sceneID="kJF-bq-xxb">
             <objects>
-                <viewController id="91N-kr-02G" customClass="LoginViewController" customModule="MarketApp" sceneMemberID="viewController">
+                <viewController id="91N-kr-02G" customClass="LoginViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P7v-DB-BBp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
