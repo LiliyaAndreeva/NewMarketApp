@@ -18,13 +18,13 @@ struct Cart {
     
     var products: [Product] = []
 
-    mutating func addProduct(_ product: Product) {
-        products.append(product)
-    }
-
-    mutating func removeProduct(at index: Int) {
-        products.remove(at: index)
-    }
+//    mutating func addProduct(_ product: Product) {
+//        products.append(product)
+//    }
+//
+//    mutating func removeProduct(at index: Int) {
+//        products.remove(at: index)
+//    }
 }
 
 struct Product {

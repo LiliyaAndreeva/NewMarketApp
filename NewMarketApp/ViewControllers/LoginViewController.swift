@@ -9,9 +9,13 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Styles.primaryBrown
+        nextButton.layer.cornerRadius = 50
+        
        
     }
     

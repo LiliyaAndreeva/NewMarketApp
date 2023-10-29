@@ -8,12 +8,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Category-->
         <scene sceneID="Lnw-dG-edk">
             <objects>
-                <tableViewController id="WXH-kj-5Jt" sceneMemberID="viewController">
+                <tableViewController id="WXH-kj-5Jt" userLabel="Category" customClass="CategoriesTableViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="mRu-21-O8m">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -38,14 +38,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SA9-Ol-bGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786" y="472"/>
+            <point key="canvasLocation" x="2768" y="375"/>
         </scene>
-        <!--Table View Controller-->
+        <!--ProductList-->
         <scene sceneID="4Hw-1C-dkT">
             <objects>
-                <tableViewController id="srZ-Uo-rZW" sceneMemberID="viewController">
+                <tableViewController id="srZ-Uo-rZW" userLabel="ProductList" customClass="ProductListTableViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="TuN-3z-2pv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -70,14 +70,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRA-93-AYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3662" y="472"/>
+            <point key="canvasLocation" x="3591" y="375"/>
         </scene>
-        <!--View Controller-->
+        <!--DescribtionOfProduct-->
         <scene sceneID="nS7-Mz-2kp">
             <objects>
-                <viewController id="O1b-Am-VYo" sceneMemberID="viewController">
+                <viewController id="O1b-Am-VYo" userLabel="DescribtionOfProduct" customClass="DescriptionOfProductsViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fde-Tv-ya0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Mp9-1x-YtW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3M-c2-s4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4414" y="472"/>
+            <point key="canvasLocation" x="4410" y="375"/>
         </scene>
         <!--Market-->
         <scene sceneID="bW8-by-D28">
@@ -94,7 +94,7 @@
                 <navigationController id="k0P-lI-fdM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Market" image="cart.circle.fill" catalog="system" id="bzh-VV-rpB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zhn-8O-A6i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -105,12 +105,57 @@
             </objects>
             <point key="canvasLocation" x="1887" y="375"/>
         </scene>
+        <!--Cart-->
+        <scene sceneID="xud-hb-Azb">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="PdS-Dk-cHa" customClass="CartViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y45-AD-ck2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zC-nx-L3w">
+                                <rect key="frame" x="122.5" y="363" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="NOv-mr-0yU" kind="presentation" id="d8j-xI-CiG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jKH-IB-td6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1zC-nx-L3w" firstAttribute="centerX" secondItem="y45-AD-ck2" secondAttribute="centerX" id="2R9-Bn-LCR"/>
+                            <constraint firstItem="1zC-nx-L3w" firstAttribute="top" secondItem="jKH-IB-td6" secondAttribute="top" constant="363" id="hnD-P0-jN1"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cart" image="basket.fill" catalog="system" id="2O4-eF-2Oj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmc-xE-ZwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="-1029"/>
+        </scene>
+        <!--Order-->
+        <scene sceneID="OU6-bJ-lKF">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="NOv-mr-0yU" userLabel="Order" customClass="OrderViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2MU-Sy-osc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5hi-7Y-euy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="syv-PP-LiH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2768" y="-1030"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="lWy-F7-Flp">
             <objects>
                 <viewController id="3Kf-5o-MtJ" customClass="ProfileViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oBv-MG-heI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Lo0-0F-oe4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -119,12 +164,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNO-Va-om1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="-452"/>
+            <point key="canvasLocation" x="1886" y="-332"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="uXg-zn-hvt">
             <objects>
-                <tabBarController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="17I-y6-NO9" sceneMemberID="viewController">
+                <tabBarController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="17I-y6-NO9" customClass="TabBarViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="NfW-ZY-F1q"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="diW-4f-d2o">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -134,6 +179,7 @@
                     <connections>
                         <segue destination="k0P-lI-fdM" kind="relationship" relationship="viewControllers" id="Kra-D3-Nkp"/>
                         <segue destination="3Kf-5o-MtJ" kind="relationship" relationship="viewControllers" id="9sS-l8-syG"/>
+                        <segue destination="PdS-Dk-cHa" kind="relationship" relationship="viewControllers" id="jTa-iT-QSb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTV-Tx-VbV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -181,7 +227,7 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4Z-EE-7KS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4Z-EE-7KS">
                                 <rect key="frame" x="90" y="439.5" width="140" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="a3y-cI-CPs"/>
@@ -192,7 +238,7 @@
                                     <color key="baseBackgroundColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="17I-y6-NO9" kind="show" id="5G7-HY-kQR"/>
+                                    <segue destination="17I-y6-NO9" kind="presentation" id="nH7-FN-tIb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -208,6 +254,9 @@
                             <constraint firstItem="Cqf-Br-Or1" firstAttribute="top" secondItem="XB2-lS-vhQ" secondAttribute="top" constant="133" id="r0q-iV-Zuh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="A4Z-EE-7KS" id="nQo-5P-fNi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5j-EE-DJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,6 +264,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="basket.fill" catalog="system" width="128" height="108"/>
         <image name="cart.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">

@@ -11,11 +11,13 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        view.backgroundColor  = Styles.secondaryBrown
+    
     }
     
-
+// ФИО, емаил, Адрес = лэйбл
+    
+    
     /*
     // MARK: - Navigation
 

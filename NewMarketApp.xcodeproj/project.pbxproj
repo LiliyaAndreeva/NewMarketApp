@@ -10,9 +10,14 @@
 		30D3B6CF2AEE9FCF008A715D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D3B6CE2AEE9FCF008A715D /* User.swift */; };
 		72A0AEAA2AEE6FD50064AE98 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEA92AEE6FD50064AE98 /* LoginViewController.swift */; };
 		72A0AEAD2AEE71670064AE98 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEAC2AEE71670064AE98 /* Colors.swift */; };
-		72A0AEB02AEE75A70064AE98 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEAF2AEE75A70064AE98 /* UIColor+Hex.swift */; };
-		72A0AEB22AEE75E10064AE98 /* UIColor+Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEB12AEE75E10064AE98 /* UIColor+Dynamic.swift */; };
 		72A0AEB42AEE765F0064AE98 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEB32AEE765F0064AE98 /* ProfileViewController.swift */; };
+		72A0AEB62AEEA86C0064AE98 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEB52AEEA86C0064AE98 /* TabBarViewController.swift */; };
+		72A0AEB82AEEA8A40064AE98 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEB72AEEA8A40064AE98 /* CartViewController.swift */; };
+		72A0AEBA2AEEA92C0064AE98 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEB92AEEA92C0064AE98 /* CategoriesTableViewController.swift */; };
+		72A0AEBC2AEEA9600064AE98 /* ProductListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEBB2AEEA9600064AE98 /* ProductListTableViewController.swift */; };
+		72A0AEBE2AEEA9A00064AE98 /* DescriptionOfProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEBD2AEEA9A00064AE98 /* DescriptionOfProductsViewController.swift */; };
+		72A0AEC02AEEA9C50064AE98 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEBF2AEEA9C50064AE98 /* OrderViewController.swift */; };
+		72A0AEC32AEEAE230064AE98 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEC22AEEAE230064AE98 /* DataStore.swift */; };
 		72C7C7112AEE6D50007DA0D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7C7102AEE6D50007DA0D2 /* AppDelegate.swift */; };
 		72C7C7132AEE6D50007DA0D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7C7122AEE6D50007DA0D2 /* SceneDelegate.swift */; };
 		72C7C7182AEE6D50007DA0D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C7C7162AEE6D50007DA0D2 /* Main.storyboard */; };
@@ -24,9 +29,14 @@
 		30D3B6CE2AEE9FCF008A715D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72A0AEA92AEE6FD50064AE98 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		72A0AEAC2AEE71670064AE98 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		72A0AEAF2AEE75A70064AE98 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
-		72A0AEB12AEE75E10064AE98 /* UIColor+Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Dynamic.swift"; sourceTree = "<group>"; };
 		72A0AEB32AEE765F0064AE98 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		72A0AEB52AEEA86C0064AE98 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		72A0AEB72AEEA8A40064AE98 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		72A0AEB92AEEA92C0064AE98 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		72A0AEBB2AEEA9600064AE98 /* ProductListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewController.swift; sourceTree = "<group>"; };
+		72A0AEBD2AEEA9A00064AE98 /* DescriptionOfProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionOfProductsViewController.swift; sourceTree = "<group>"; };
+		72A0AEBF2AEEA9C50064AE98 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		72A0AEC22AEEAE230064AE98 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		72C7C70D2AEE6D50007DA0D2 /* NewMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C7C7102AEE6D50007DA0D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72C7C7122AEE6D50007DA0D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,13 +65,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		72A0AEAE2AEE75580064AE98 /* Extentions */ = {
+		72A0AEC12AEEAE070064AE98 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				72A0AEAF2AEE75A70064AE98 /* UIColor+Hex.swift */,
-				72A0AEB12AEE75E10064AE98 /* UIColor+Dynamic.swift */,
+				72A0AEC22AEEAE230064AE98 /* DataStore.swift */,
 			);
-			path = Extentions;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		72C7C7042AEE6D50007DA0D2 = {
@@ -83,9 +92,9 @@
 		72C7C70F2AEE6D50007DA0D2 /* NewMarketApp */ = {
 			isa = PBXGroup;
 			children = (
+				72A0AEC12AEEAE070064AE98 /* Services */,
 				30D3B6CD2AEE9FBC008A715D /* Models */,
 				72C7C7242AEE6DE0007DA0D2 /* ViewControllers */,
-				72A0AEAE2AEE75580064AE98 /* Extentions */,
 				72C7C7252AEE6DF0007DA0D2 /* SupportingFiles */,
 				72C7C7262AEE6E1D007DA0D2 /* Resourses */,
 				72C7C7272AEE6E2A007DA0D2 /* Storyboards */,
@@ -98,6 +107,12 @@
 			children = (
 				72A0AEA92AEE6FD50064AE98 /* LoginViewController.swift */,
 				72A0AEB32AEE765F0064AE98 /* ProfileViewController.swift */,
+				72A0AEB52AEEA86C0064AE98 /* TabBarViewController.swift */,
+				72A0AEB72AEEA8A40064AE98 /* CartViewController.swift */,
+				72A0AEB92AEEA92C0064AE98 /* CategoriesTableViewController.swift */,
+				72A0AEBB2AEEA9600064AE98 /* ProductListTableViewController.swift */,
+				72A0AEBD2AEEA9A00064AE98 /* DescriptionOfProductsViewController.swift */,
+				72A0AEBF2AEEA9C50064AE98 /* OrderViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,14 +216,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A0AEC32AEEAE230064AE98 /* DataStore.swift in Sources */,
 				72A0AEAA2AEE6FD50064AE98 /* LoginViewController.swift in Sources */,
 				72A0AEAD2AEE71670064AE98 /* Colors.swift in Sources */,
+				72A0AEB82AEEA8A40064AE98 /* CartViewController.swift in Sources */,
+				72A0AEC02AEEA9C50064AE98 /* OrderViewController.swift in Sources */,
 				72C7C7112AEE6D50007DA0D2 /* AppDelegate.swift in Sources */,
-				72A0AEB22AEE75E10064AE98 /* UIColor+Dynamic.swift in Sources */,
+				72A0AEBA2AEEA92C0064AE98 /* CategoriesTableViewController.swift in Sources */,
+				72A0AEB62AEEA86C0064AE98 /* TabBarViewController.swift in Sources */,
+				72A0AEBE2AEEA9A00064AE98 /* DescriptionOfProductsViewController.swift in Sources */,
 				30D3B6CF2AEE9FCF008A715D /* User.swift in Sources */,
 				72A0AEB42AEE765F0064AE98 /* ProfileViewController.swift in Sources */,
 				72C7C7132AEE6D50007DA0D2 /* SceneDelegate.swift in Sources */,
-				72A0AEB02AEE75A70064AE98 /* UIColor+Hex.swift in Sources */,
+				72A0AEBC2AEEA9600064AE98 /* ProductListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
