@@ -25,6 +25,7 @@ struct Cart {
 //    mutating func removeProduct(at index: Int) {
 //        products.remove(at: index)
 //    }
+// eaeaeae
 }
 
 struct Product {
