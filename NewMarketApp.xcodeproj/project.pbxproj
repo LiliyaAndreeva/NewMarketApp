@@ -14,8 +14,8 @@
 		72A0AEB62AEEA86C0064AE98 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEB52AEEA86C0064AE98 /* TabBarViewController.swift */; };
 		72A0AEB82AEEA8A40064AE98 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEB72AEEA8A40064AE98 /* CartViewController.swift */; };
 		72A0AEBA2AEEA92C0064AE98 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEB92AEEA92C0064AE98 /* CategoriesTableViewController.swift */; };
-		72A0AEBC2AEEA9600064AE98 /* ProductListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEBB2AEEA9600064AE98 /* ProductListTableViewController.swift */; };
-		72A0AEBE2AEEA9A00064AE98 /* DescriptionOfProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEBD2AEEA9A00064AE98 /* DescriptionOfProductsViewController.swift */; };
+		72A0AEBC2AEEA9600064AE98 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEBB2AEEA9600064AE98 /* ProductsTableViewController.swift */; };
+		72A0AEBE2AEEA9A00064AE98 /* ProductsDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEBD2AEEA9A00064AE98 /* ProductsDescriptionViewController.swift */; };
 		72A0AEC02AEEA9C50064AE98 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEBF2AEEA9C50064AE98 /* OrderViewController.swift */; };
 		72A0AEC32AEEAE230064AE98 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEC22AEEAE230064AE98 /* DataStore.swift */; };
 		72C7C7112AEE6D50007DA0D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7C7102AEE6D50007DA0D2 /* AppDelegate.swift */; };
@@ -33,8 +33,8 @@
 		72A0AEB52AEEA86C0064AE98 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		72A0AEB72AEEA8A40064AE98 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		72A0AEB92AEEA92C0064AE98 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
-		72A0AEBB2AEEA9600064AE98 /* ProductListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewController.swift; sourceTree = "<group>"; };
-		72A0AEBD2AEEA9A00064AE98 /* DescriptionOfProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionOfProductsViewController.swift; sourceTree = "<group>"; };
+		72A0AEBB2AEEA9600064AE98 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		72A0AEBD2AEEA9A00064AE98 /* ProductsDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDescriptionViewController.swift; sourceTree = "<group>"; };
 		72A0AEBF2AEEA9C50064AE98 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		72A0AEC22AEEAE230064AE98 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		72C7C70D2AEE6D50007DA0D2 /* NewMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,8 +110,8 @@
 				72A0AEB52AEEA86C0064AE98 /* TabBarViewController.swift */,
 				72A0AEB72AEEA8A40064AE98 /* CartViewController.swift */,
 				72A0AEB92AEEA92C0064AE98 /* CategoriesTableViewController.swift */,
-				72A0AEBB2AEEA9600064AE98 /* ProductListTableViewController.swift */,
-				72A0AEBD2AEEA9A00064AE98 /* DescriptionOfProductsViewController.swift */,
+				72A0AEBB2AEEA9600064AE98 /* ProductsTableViewController.swift */,
+				72A0AEBD2AEEA9A00064AE98 /* ProductsDescriptionViewController.swift */,
 				72A0AEBF2AEEA9C50064AE98 /* OrderViewController.swift */,
 			);
 			path = ViewControllers;
@@ -224,11 +224,11 @@
 				72C7C7112AEE6D50007DA0D2 /* AppDelegate.swift in Sources */,
 				72A0AEBA2AEEA92C0064AE98 /* CategoriesTableViewController.swift in Sources */,
 				72A0AEB62AEEA86C0064AE98 /* TabBarViewController.swift in Sources */,
-				72A0AEBE2AEEA9A00064AE98 /* DescriptionOfProductsViewController.swift in Sources */,
+				72A0AEBE2AEEA9A00064AE98 /* ProductsDescriptionViewController.swift in Sources */,
 				30D3B6CF2AEE9FCF008A715D /* User.swift in Sources */,
 				72A0AEB42AEE765F0064AE98 /* ProfileViewController.swift in Sources */,
 				72C7C7132AEE6D50007DA0D2 /* SceneDelegate.swift in Sources */,
-				72A0AEBC2AEEA9600064AE98 /* ProductListTableViewController.swift in Sources */,
+				72A0AEBC2AEEA9600064AE98 /* ProductsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

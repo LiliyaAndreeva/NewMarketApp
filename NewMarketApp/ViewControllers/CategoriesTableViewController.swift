@@ -1,24 +1,19 @@
-//
-//  CategoriesTableViewController.swift
-//  NewMarketApp
-//
-//  Created by Лилия Андреева on 29.10.2023.
-//
+//  Created by Motherlode Team on 29.10.23.
 
 import UIKit
 
-class CategoriesTableViewController: UITableViewController {
+final class CategoriesTableViewController: UITableViewController {
 
     let allCategories = DataStore.getAllCategories()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor  = Styles.secondaryBrown
+        view.backgroundColor  = Styles.beige
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard  let indexPath = tableView.indexPathForSelectedRow else { return }
-        let productVC = segue.destination as? ProductListTableViewController
+        let productVC = segue.destination as? ProductsTableViewController
         let selectedCategory = allCategories[indexPath.row]
 
                         var selectedProducts: [Product]
