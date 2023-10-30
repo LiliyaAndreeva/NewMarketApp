@@ -18,6 +18,7 @@
 		72A0AEBE2AEEA9A00064AE98 /* ProductsDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEBD2AEEA9A00064AE98 /* ProductsDescriptionViewController.swift */; };
 		72A0AEC02AEEA9C50064AE98 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEBF2AEEA9C50064AE98 /* OrderViewController.swift */; };
 		72A0AEC32AEEAE230064AE98 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEC22AEEAE230064AE98 /* DataStore.swift */; };
+		72A0AEC52AEFEA8C0064AE98 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0AEC42AEFEA8C0064AE98 /* CartTableViewController.swift */; };
 		72C7C7112AEE6D50007DA0D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7C7102AEE6D50007DA0D2 /* AppDelegate.swift */; };
 		72C7C7132AEE6D50007DA0D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7C7122AEE6D50007DA0D2 /* SceneDelegate.swift */; };
 		72C7C7182AEE6D50007DA0D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C7C7162AEE6D50007DA0D2 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		72A0AEBD2AEEA9A00064AE98 /* ProductsDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDescriptionViewController.swift; sourceTree = "<group>"; };
 		72A0AEBF2AEEA9C50064AE98 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		72A0AEC22AEEAE230064AE98 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		72A0AEC42AEFEA8C0064AE98 /* CartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
 		72C7C70D2AEE6D50007DA0D2 /* NewMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C7C7102AEE6D50007DA0D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72C7C7122AEE6D50007DA0D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				72A0AEBB2AEEA9600064AE98 /* ProductsTableViewController.swift */,
 				72A0AEBD2AEEA9A00064AE98 /* ProductsDescriptionViewController.swift */,
 				72A0AEBF2AEEA9C50064AE98 /* OrderViewController.swift */,
+				72A0AEC42AEFEA8C0064AE98 /* CartTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				72A0AEBA2AEEA92C0064AE98 /* CategoriesTableViewController.swift in Sources */,
 				72A0AEB62AEEA86C0064AE98 /* TabBarViewController.swift in Sources */,
 				72A0AEBE2AEEA9A00064AE98 /* ProductsDescriptionViewController.swift in Sources */,
+				72A0AEC52AEFEA8C0064AE98 /* CartTableViewController.swift in Sources */,
 				30D3B6CF2AEE9FCF008A715D /* User.swift in Sources */,
 				72A0AEB42AEE765F0064AE98 /* ProfileViewController.swift in Sources */,
 				72C7C7132AEE6D50007DA0D2 /* SceneDelegate.swift in Sources */,
