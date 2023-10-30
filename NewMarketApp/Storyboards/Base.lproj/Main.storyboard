@@ -241,7 +241,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jiy-aU-toQ">
                                         <rect key="frame" x="0.0" y="113" width="288" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -256,6 +256,7 @@
                                     <color key="baseBackgroundColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="nextButtonPressed" destination="91N-kr-02G" eventType="touchUpInside" id="yL7-BH-go3"/>
                                     <segue destination="17I-y6-NO9" kind="presentation" id="nH7-FN-tIb"/>
                                 </connections>
                             </button>
@@ -273,7 +274,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nextButton" destination="A4Z-EE-7KS" id="nQo-5P-fNi"/>
+                        <outlet property="nextButton" destination="A4Z-EE-7KS" id="NKb-u0-Af2"/>
+                        <outlet property="passwordTextField" destination="jiy-aU-toQ" id="1a8-6K-WzG"/>
+                        <outlet property="userNameTextField" destination="5bB-un-v4h" id="FV6-dh-Bfn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5j-EE-DJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
