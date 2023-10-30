@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DescriptionOfProductsViewController: UIViewController {
+class ProductsDescriptionViewController: UIViewController {
     
     var product: Product!
     
