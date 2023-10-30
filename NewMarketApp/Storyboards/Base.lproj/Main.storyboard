@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91N-kr-02G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91N-kr-02G">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Category-->
+        <!--CategoriesList-->
         <scene sceneID="Lnw-dG-edk">
             <objects>
-                <tableViewController id="WXH-kj-5Jt" userLabel="Category" customClass="CategoriesTableViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="WXH-kj-5Jt" userLabel="CategoriesList" customClass="CategoriesTableViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="mRu-21-O8m">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,12 +38,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SA9-Ol-bGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2768" y="375"/>
+            <point key="canvasLocation" x="2934" y="589"/>
         </scene>
-        <!--ProductList-->
+        <!--ProductsList-->
         <scene sceneID="4Hw-1C-dkT">
             <objects>
-                <tableViewController id="srZ-Uo-rZW" userLabel="ProductList" customClass="ProductListTableViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="srZ-Uo-rZW" userLabel="ProductsList" customClass="ProductsTableViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="TuN-3z-2pv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,12 +70,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRA-93-AYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3591" y="375"/>
+            <point key="canvasLocation" x="3758" y="589"/>
         </scene>
         <!--DescribtionOfProduct-->
         <scene sceneID="nS7-Mz-2kp">
             <objects>
-                <viewController id="O1b-Am-VYo" userLabel="DescribtionOfProduct" customClass="DescriptionOfProductsViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="O1b-Am-VYo" userLabel="DescribtionOfProduct" customClass="ProductsDescriptionViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fde-Tv-ya0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3M-c2-s4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4410" y="375"/>
+            <point key="canvasLocation" x="4779" y="589"/>
         </scene>
         <!--Market-->
         <scene sceneID="bW8-by-D28">
@@ -112,7 +112,7 @@
                 <navigationController id="k0P-lI-fdM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Market" image="cart.circle.fill" catalog="system" id="bzh-VV-rpB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zhn-8O-A6i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -121,7 +121,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqn-W7-J7d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1887" y="375"/>
+            <point key="canvasLocation" x="2051" y="589"/>
         </scene>
         <!--Cart-->
         <scene sceneID="xud-hb-Azb">
@@ -151,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmc-xE-ZwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="-1029"/>
+            <point key="canvasLocation" x="2049" y="-815"/>
         </scene>
         <!--Order-->
         <scene sceneID="OU6-bJ-lKF">
@@ -166,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="syv-PP-LiH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2768" y="-1030"/>
+            <point key="canvasLocation" x="2934" y="-817"/>
         </scene>
         <!--Profile-->
         <scene sceneID="lWy-F7-Flp">
@@ -182,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNO-Va-om1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="-332"/>
+            <point key="canvasLocation" x="2049" y="-118"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="uXg-zn-hvt">
