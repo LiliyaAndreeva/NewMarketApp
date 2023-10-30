@@ -65,10 +65,10 @@ struct Product {
 }
     
 enum Categories: String {
-    case dairyProducts = "Молочные продукты"
-    case bakery = "Хлебобулочные изделия"
-    case meatAndFish = "Мясо и рыба"
-    case fruitsAndVegetables = "Фрукты и овощи"
-    case groats = "Крупы"
+    case dairyProducts = "milkproducts"
+    case bakery = "breadproducts"
+    case meatAndFish = "meatandfish"
+    case fruitsAndVegetables = "fruitsandveg"
+    case groats = "goats"
 }
 
