@@ -36,7 +36,7 @@ extension ProductsTableViewController {
         content.secondaryText = String(product.price)
         cell.contentConfiguration = content
         // Configure the cell...
-
+        
         return cell
     }
     
