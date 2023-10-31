@@ -7,25 +7,32 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-
+final class ProfileViewController: UIViewController {
+    
+    @IBOutlet weak var userImage: UIImageView! {
+        didSet {
+            userImage.layer.cornerRadius = userImage.frame.height / 2
+        }
+    }
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var surnameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor  = Styles.secondaryBrown
-    
-    }
-    
-// ФИО, емаил, Адрес = лэйбл
-    
-    
-    /*
-    // MARK: - Navigation
+        welcomeLabel.text = """
+        Добро пожаловать,
+        \(user.username)!
+        """
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        userImage.image = UIImage(named: user.customer.photo)
+        nameLabel.text = user.customer.name
+        surnameLabel.text = user.customer.surname
+        emailLabel.text = user.customer.email
     }
-    */
-
 }

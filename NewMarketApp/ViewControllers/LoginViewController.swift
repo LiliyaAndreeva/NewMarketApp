@@ -22,6 +22,13 @@ class LoginViewController: UIViewController {
         nextButton.clipsToBounds = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarController = segue.destination as? TabBarViewController else {
+            return
+        }
+        tabBarController.user = user
+    }
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         nextButton.layer.cornerRadius = nextButton.bounds.height / 2
