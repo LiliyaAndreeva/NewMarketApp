@@ -4,7 +4,7 @@ import UIKit
 
 final class CategoriesTableViewController: UITableViewController {
     
-    let allCategories = DataStore.getAllCategories()
+    let allCategories = DataStore.getAllCategories() //вынести в функцию?
     
     override func viewDidLoad() {
         super.viewDidLoad()
