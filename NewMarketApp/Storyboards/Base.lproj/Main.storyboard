@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91N-kr-02G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91N-kr-02G">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,8 +17,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-
-
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstCell" textLabel="MTf-la-5hB" style="IBUITableViewCellStyleDefault" id="dcm-1Y-MBz">
                                 <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -224,7 +222,7 @@
                 <navigationController id="WzD-SF-Zkb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Cart" image="basket.fill" catalog="system" id="lD5-Ui-8HK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LeB-Ah-Eb4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -235,21 +233,108 @@
             </objects>
             <point key="canvasLocation" x="2049" y="-900"/>
         </scene>
-        <!--Profile-->
+        <!--Профиль-->
         <scene sceneID="lWy-F7-Flp">
             <objects>
                 <viewController id="3Kf-5o-MtJ" customClass="ProfileViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oBv-MG-heI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObH-z3-2gp">
+                                <rect key="frame" x="52" y="88" width="216" height="23"/>
+                                <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="23"/>
+                                <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ILx-m7-wHv">
+                                <rect key="frame" x="85" y="145" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="qPr-mN-anh"/>
+                                    <constraint firstAttribute="width" constant="150" id="uYU-rX-W19"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lQf-RR-cft">
+                                <rect key="frame" x="20" y="326" width="280" height="67"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3cY-1Z-8G5">
+                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="19"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQI-xu-qO1">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="19"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="19"/>
+                                                <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7i-kx-SWp">
+                                                <rect key="frame" x="55" y="0.0" width="44.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="19"/>
+                                                <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="dU2-ss-o9l">
+                                        <rect key="frame" x="0.0" y="24" width="144" height="19"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUd-dy-t8j">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="19"/>
+                                                <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-O6-8b0">
+                                                <rect key="frame" x="99.5" y="0.0" width="44.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="19"/>
+                                                <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ohn-1B-N4c">
+                                        <rect key="frame" x="0.0" y="48" width="111" height="19"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYL-t9-ygO">
+                                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="19"/>
+                                                <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i86-3k-Jpp">
+                                                <rect key="frame" x="66.5" y="0.0" width="44.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="19"/>
+                                                <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Lo0-0F-oe4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94202923770000002" green="0.91393005849999998" blue="0.89017093179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Lo0-0F-oe4" firstAttribute="trailing" secondItem="lQf-RR-cft" secondAttribute="trailing" constant="20" id="Dc9-Dy-wx1"/>
+                            <constraint firstItem="lQf-RR-cft" firstAttribute="top" secondItem="ILx-m7-wHv" secondAttribute="bottom" constant="31" id="SxH-rT-Dei"/>
+                            <constraint firstItem="ObH-z3-2gp" firstAttribute="centerX" secondItem="oBv-MG-heI" secondAttribute="centerX" id="UhO-Tr-gbP"/>
+                            <constraint firstItem="lQf-RR-cft" firstAttribute="leading" secondItem="Lo0-0F-oe4" secondAttribute="leading" constant="20" id="eTz-3P-7Ip"/>
+                            <constraint firstItem="ILx-m7-wHv" firstAttribute="top" secondItem="ObH-z3-2gp" secondAttribute="bottom" constant="34" id="gR1-Qf-wFG"/>
+                            <constraint firstItem="ILx-m7-wHv" firstAttribute="centerX" secondItem="oBv-MG-heI" secondAttribute="centerX" id="ixA-0R-aFI"/>
+                            <constraint firstItem="ObH-z3-2gp" firstAttribute="top" secondItem="Lo0-0F-oe4" secondAttribute="top" constant="88" id="me5-XP-qqi"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="CfM-Md-KUL"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person.fill" catalog="system" id="CfM-Md-KUL"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="i86-3k-Jpp" id="j0c-9A-jz0"/>
+                        <outlet property="nameLabel" destination="L7i-kx-SWp" id="GVp-gf-5Bo"/>
+                        <outlet property="surnameLabel" destination="ehi-O6-8b0" id="9f7-pD-mPh"/>
+                        <outlet property="userImage" destination="ILx-m7-wHv" id="QAS-IY-KHO"/>
+                        <outlet property="welcomeLabel" destination="ObH-z3-2gp" id="hlx-xV-Civ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNO-Va-om1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049" y="-118"/>
+            <point key="canvasLocation" x="2047.5" y="-118.30985915492958"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="uXg-zn-hvt">

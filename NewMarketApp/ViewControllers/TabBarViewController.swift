@@ -7,23 +7,32 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+final class TabBarViewController: UITabBarController {
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let appearance = UITabBarAppearance()
+        tabBar.standardAppearance = appearance
+        tabBar.scrollEdgeAppearance = appearance
+        
+        transferData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func transferData() {
+        guard let viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let userVC = $0 as? ProfileViewController {
+                userVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                let cartInfoVC = navigationVC.topViewController
+                guard let cartInfoVC = cartInfoVC as? CartViewController else {
+                    return
+                }
+                //cartInfoVC.
+            }
+        }
     }
-    */
 
 }
