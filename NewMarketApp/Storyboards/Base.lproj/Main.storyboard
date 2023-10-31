@@ -135,6 +135,130 @@
             </objects>
             <point key="canvasLocation" x="4779" y="589"/>
         </scene>
+        <!--Team-->
+        <scene sceneID="iKb-t1-cUr">
+            <objects>
+                <viewController id="BS2-fp-65L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w8y-oi-Xd3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Над проектом работали:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOv-CR-sZK">
+                                <rect key="frame" x="40" y="16" width="240" height="23"/>
+                                <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="23"/>
+                                <color key="textColor" red="0.48627450980392156" green="0.27450980392156865" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1yQ-5R-Ltc">
+                                <rect key="frame" x="16" y="69" width="288" height="417"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gdI-71-R5C">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="77"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Liliya" translatesAutoresizingMaskIntoConstraints="NO" id="5qY-8Y-K7S">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="5qY-8Y-K7S" secondAttribute="height" multiplier="1:1" id="JW6-5Y-jGd"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Лилия Андреева" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibz-fr-hxQ">
+                                                <rect key="frame" x="85" y="30" width="203" height="17"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BUQ-Tw-03c">
+                                        <rect key="frame" x="0.0" y="85" width="288" height="77"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tim" translatesAutoresizingMaskIntoConstraints="NO" id="OEW-mQ-Ihf">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="OEW-mQ-Ihf" secondAttribute="height" multiplier="1:1" id="eSj-jV-gmk"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тим Халли" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYX-p5-cEF">
+                                                <rect key="frame" x="85" y="30" width="203" height="17"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EHL-dy-dI4">
+                                        <rect key="frame" x="0.0" y="170" width="288" height="77"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Elizabeth" translatesAutoresizingMaskIntoConstraints="NO" id="bPO-Rj-G8f">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bPO-Rj-G8f" secondAttribute="height" multiplier="1:1" id="RnF-40-nR5"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Елизавета Максимовна" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftG-Lz-hoK">
+                                                <rect key="frame" x="85" y="30" width="203" height="17"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VWb-ub-Rb5">
+                                        <rect key="frame" x="0.0" y="255" width="288" height="77"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Roman" translatesAutoresizingMaskIntoConstraints="NO" id="XlR-yf-5dE">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XlR-yf-5dE" secondAttribute="height" multiplier="1:1" id="ogd-ae-rDd"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Роман Кондрашов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gQ-QV-E9S">
+                                                <rect key="frame" x="85" y="30" width="203" height="17"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G8n-Ve-XfP">
+                                        <rect key="frame" x="0.0" y="340" width="288" height="77"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tatyana" translatesAutoresizingMaskIntoConstraints="NO" id="fdc-Mw-jx1">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fdc-Mw-jx1" secondAttribute="height" multiplier="1:1" id="7wo-AU-tIa"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Татьяна Дубова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQp-Fi-CBT">
+                                                <rect key="frame" x="85" y="30" width="203" height="17"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="21p-8B-hfw"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.9137254901960784" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xOv-CR-sZK" firstAttribute="leading" secondItem="21p-8B-hfw" secondAttribute="leading" constant="40" id="Cfj-Jj-ZiP"/>
+                            <constraint firstItem="xOv-CR-sZK" firstAttribute="top" secondItem="21p-8B-hfw" secondAttribute="top" constant="16" id="ELb-gZ-k7u"/>
+                            <constraint firstItem="21p-8B-hfw" firstAttribute="trailing" secondItem="xOv-CR-sZK" secondAttribute="trailing" constant="40" id="GGq-LC-IIj"/>
+                            <constraint firstAttribute="trailing" secondItem="1yQ-5R-Ltc" secondAttribute="trailing" constant="16" id="J6B-Re-Gwe"/>
+                            <constraint firstItem="1yQ-5R-Ltc" firstAttribute="top" secondItem="xOv-CR-sZK" secondAttribute="bottom" constant="30" id="MJY-Gx-1I0"/>
+                            <constraint firstItem="1yQ-5R-Ltc" firstAttribute="height" secondItem="w8y-oi-Xd3" secondAttribute="height" multiplier="0.734155" id="a4L-vI-mJ3"/>
+                            <constraint firstItem="21p-8B-hfw" firstAttribute="trailing" secondItem="xOv-CR-sZK" secondAttribute="trailing" constant="40" id="aY4-hV-tkv"/>
+                            <constraint firstItem="1yQ-5R-Ltc" firstAttribute="leading" secondItem="21p-8B-hfw" secondAttribute="leading" constant="16" id="xXB-Em-iQE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Team" image="person.3.fill" catalog="system" id="Nzg-IF-BbL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QMJ-9r-Gtq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948.75" y="836.61971830985919"/>
+        </scene>
         <!--Market-->
         <scene sceneID="bW8-by-D28">
             <objects>
@@ -321,6 +445,7 @@
                         <segue destination="k0P-lI-fdM" kind="relationship" relationship="viewControllers" id="Kra-D3-Nkp"/>
                         <segue destination="3Kf-5o-MtJ" kind="relationship" relationship="viewControllers" id="9sS-l8-syG"/>
                         <segue destination="WzD-SF-Zkb" kind="relationship" relationship="viewControllers" id="zkj-v8-Tp9"/>
+                        <segue destination="BS2-fp-65L" kind="relationship" relationship="viewControllers" id="Lp2-Pf-a9P"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTV-Tx-VbV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -552,6 +677,7 @@
         <image name="apple" width="1080" height="1080"/>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.3.fill" catalog="system" width="128" height="66"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
