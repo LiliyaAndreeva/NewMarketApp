@@ -21,10 +21,12 @@ class CustomTableViewCell: UITableViewCell {
     
     private var count = 1
     private var price = 100
+    private var summa = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
         priceLabel.text = "\(price)"
+        
         priceOfProductTF.text = priceLabel.text
     }
 
@@ -39,13 +41,14 @@ class CustomTableViewCell: UITableViewCell {
         case minusButton:
             if count > 0 {
                 count -= 1}
-            price /= count
-            priceOfProductTF.text = "\(price)"
+            summa = price * count
+            priceOfProductTF.text = "\(summa)"
             
         default:
             count += 1
-            price *= count
-            priceOfProductTF.text = "\(price)"
+
+            summa = price * count
+            priceOfProductTF.text = "\(summa)"
         }
         productQuantityTF.text = "\(count)"
     }
