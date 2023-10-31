@@ -17,8 +17,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-
-
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstCell" textLabel="MTf-la-5hB" style="IBUITableViewCellStyleDefault" id="dcm-1Y-MBz">
                                 <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -189,42 +187,13 @@
             </objects>
             <point key="canvasLocation" x="3879" y="-912"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="WtC-ff-P69">
-            <objects>
-                <tableViewController id="wRR-pV-DyP" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="qRs-N5-ANK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Product" id="BUo-rH-2xd">
-                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BUo-rH-2xd" id="7ig-31-Akd">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="wRR-pV-DyP" id="U2V-E8-ONt"/>
-                            <outlet property="delegate" destination="wRR-pV-DyP" id="u35-kd-EIY"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="PdS-2i-zIG"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rLr-rp-9XM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4913" y="-1439"/>
-        </scene>
         <!--Cart-->
         <scene sceneID="pQu-h8-fRz">
             <objects>
                 <navigationController id="WzD-SF-Zkb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Cart" image="basket.fill" catalog="system" id="lD5-Ui-8HK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LeB-Ah-Eb4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -369,32 +338,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="O0I-Vx-fKN">
-                                                    <rect key="frame" x="200.5" y="12.5" width="119.5" height="34.5"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEl-7u-SMg">
-                                                            <rect key="frame" x="0.0" y="0.0" width="32" height="34.5"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="-"/>
-                                                            <connections>
-                                                                <action selector="minusPlusButtonPressed:" destination="Gj7-Kd-4UK" eventType="touchUpInside" id="Y62-3o-ebQ"/>
-                                                            </connections>
-                                                        </button>
-                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGl-2N-sCc">
-                                                            <rect key="frame" x="40" y="0.0" width="37" height="34.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ji-nU-Azc">
-                                                            <rect key="frame" x="85" y="0.0" width="34.5" height="34.5"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="+"/>
-                                                            <connections>
-                                                                <action selector="minusPlusButtonPressed:" destination="Gj7-Kd-4UK" eventType="touchUpInside" id="qWx-eK-VgZ"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="DBS-PT-1U9">
                                                     <rect key="frame" x="16" y="0.0" width="59" height="59"/>
                                                     <constraints>
@@ -419,22 +362,54 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yZK-K3-VB4">
+                                                    <rect key="frame" x="156" y="12.5" width="150.5" height="34.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEl-7u-SMg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="32" height="34.5"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                                            <connections>
+                                                                <action selector="minusPlusButtonPressed:" destination="Gj7-Kd-4UK" eventType="touchUpInside" id="Y62-3o-ebQ"/>
+                                                            </connections>
+                                                        </button>
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGl-2N-sCc">
+                                                            <rect key="frame" x="37" y="0.0" width="37" height="34.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ji-nU-Azc">
+                                                            <rect key="frame" x="79" y="0.0" width="34.5" height="34.5"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                                            <connections>
+                                                                <action selector="minusPlusButtonPressed:" destination="Gj7-Kd-4UK" eventType="touchUpInside" id="qWx-eK-VgZ"/>
+                                                            </connections>
+                                                        </button>
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mws-02-Obn">
+                                                            <rect key="frame" x="118.5" y="0.0" width="32" height="34.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="DBS-PT-1U9" firstAttribute="centerY" secondItem="Eoa-LN-6Ob" secondAttribute="centerY" id="5GJ-OT-r1L"/>
                                                 <constraint firstItem="qad-GA-8HO" firstAttribute="leading" secondItem="DBS-PT-1U9" secondAttribute="trailing" constant="16" id="IV2-gL-NVk"/>
+                                                <constraint firstItem="yZK-K3-VB4" firstAttribute="centerY" secondItem="Eoa-LN-6Ob" secondAttribute="centerY" id="IfK-s0-r7t"/>
                                                 <constraint firstItem="qad-GA-8HO" firstAttribute="top" secondItem="Eoa-LN-6Ob" secondAttribute="top" constant="2.5" id="SrC-IA-FWy"/>
+                                                <constraint firstAttribute="trailing" secondItem="yZK-K3-VB4" secondAttribute="trailing" constant="13.5" id="cSP-8i-Oic"/>
                                                 <constraint firstItem="qad-GA-8HO" firstAttribute="centerY" secondItem="Eoa-LN-6Ob" secondAttribute="centerY" id="cy3-yG-T9c"/>
                                                 <constraint firstItem="DBS-PT-1U9" firstAttribute="leading" secondItem="Eoa-LN-6Ob" secondAttribute="leading" constant="16" id="iP9-6m-B9B"/>
-                                                <constraint firstItem="O0I-Vx-fKN" firstAttribute="centerY" secondItem="Eoa-LN-6Ob" secondAttribute="centerY" id="pVm-mN-Wol"/>
                                                 <constraint firstAttribute="bottom" secondItem="qad-GA-8HO" secondAttribute="bottom" constant="2.5" id="vcG-3p-x5m"/>
-                                                <constraint firstItem="O0I-Vx-fKN" firstAttribute="trailing" secondItem="Eoa-LN-6Ob" secondAttribute="trailingMargin" constant="16" id="yPo-2W-DiG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="minusButton" destination="oEl-7u-SMg" id="n5X-3z-B1u"/>
                                             <outlet property="plusButton" destination="4Ji-nU-Azc" id="Oft-AI-knA"/>
                                             <outlet property="priceLabel" destination="5cN-Pi-mgT" id="hdf-3g-9t4"/>
+                                            <outlet property="priceOfProductTF" destination="Mws-02-Obn" id="Y6j-Px-RXT"/>
                                             <outlet property="productLabel" destination="cok-Zr-eQv" id="Wjk-XX-HsH"/>
                                             <outlet property="productQuantityTF" destination="CGl-2N-sCc" id="HrP-fk-py8"/>
                                         </connections>

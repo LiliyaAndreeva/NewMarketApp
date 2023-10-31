@@ -12,18 +12,20 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var productLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
-    
     @IBOutlet weak var minusButton: UIButton!
-    
     @IBOutlet weak var plusButton: UIButton!
     
     @IBOutlet weak var productQuantityTF: UITextField!
+    @IBOutlet weak var priceOfProductTF: UITextField!
+    
     
     private var count = 1
+    private var price = 100
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        priceLabel.text = "\(price)"
+        priceOfProductTF.text = priceLabel.text
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,9 +39,13 @@ class CustomTableViewCell: UITableViewCell {
         case minusButton:
             if count > 0 {
                 count -= 1}
+            price /= count
+            priceOfProductTF.text = "\(price)"
             
         default:
             count += 1
+            price *= count
+            priceOfProductTF.text = "\(price)"
         }
         productQuantityTF.text = "\(count)"
     }
