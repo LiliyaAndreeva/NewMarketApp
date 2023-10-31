@@ -5,33 +5,92 @@ final class DataStore {
     
     // MARK: - Массивы
     let dairyProducts: [Product] = [
-        Product(productName: "Молоко", price: 2.1, shortDescription: "Fresh milk", category: .dairyProducts),
-        Product(productName: "Сыр", price: 3, shortDescription: "Aged cheddar", category: .dairyProducts),
-        Product(productName: "Творог", price: 1.5, shortDescription:"Natural yogurt", category: .dairyProducts)
+        Product(productName: "Молоко", 
+                price: 2.1,
+                shortDescription: "Натуральное коровье молоко без растительных жиров. Без консервантов, красителей и ароматизаторов. Можно пить просто так, добавлять в кофе, кашу, омлет, десерты и выпечку. У продукта экологичная упаковка: её можно сдать на переработку.",
+                imageName: "milk",
+                category: .dairyProducts),
+        Product(productName: "Сыр", 
+                price: 3,
+                shortDescription: "Сыр из коровьего молока с лёгкой кислинкой. Имеет пористую текстуру со множеством дырочек разной формы. Подойдёт для приготовления бутербродов, сэндвичей, пиццы, закусок и вторых блюд.",
+                imageName: "cheese",
+                category: .dairyProducts),
+        Product(productName: "Творог", 
+                price: 1.5,
+                shortDescription:"Натуральный рассыпчатый творог с простым и понятным составом — только молоко и закваска. Продукт готовят традиционным способом сквашивания молока, поэтому он сохраняет все полезные свойства. Молоко привозят с фермы, где коровы находятся на свободном выгуле и едят только натуральный корм. Творог богат кальцием, фосфором и молочным белком. Можно есть просто так, добавить в выпечку или приготовить запеканку.",
+                imageName: "cotaggecheese",
+                category: .dairyProducts)
     ]
     
     let bakery: [Product] = [
-        Product(productName: "Хлеб", price: 1.5, shortDescription: "Whole wheat bread", category: .bakery),
-        Product(productName: "Баггет французский", price: 2, shortDescription: "French baguette", category: .bakery),
-        Product(productName: "Круассан", price: 1.6, shortDescription: "Buttery croissant", category: .bakery)
+        Product(productName: "Белый хлеб",
+                price: 1.5,
+                shortDescription: "Классический нарезной батон из пшеничной муки высшего сорта. Приготовлен на опаре.",
+                imageName: "bread", category: .bakery),
+        Product(productName: "Багет французский",
+                price: 2,
+                shortDescription: "Французский багет с хрустящей корочкой и воздушным мякишем.",
+                imageName: "baguette",
+                category: .bakery),
+        Product(productName: "Круассан", 
+                price: 1.6,
+                shortDescription: "Воздушный круассан, выпеченный на сливочном масле, с добавлением шоколадного крема. Можно есть просто так, а можно разрезать и добавить внутрь сытную или сладкую начинку.",
+                imageName: "cruassan",
+                category: .bakery)
     ]
     
     let meatAndFish: [Product] = [
-        Product(productName: "Говядина", price: 1.5, shortDescription: "Lean beef", category: .meatAndFish),
-        Product(productName: "Курица", price: 1.4, shortDescription: "Skinless chicken breast", category: .meatAndFish),
-        Product(productName: "Семга", price: 2, shortDescription: "Wild-caught salmon", category: .meatAndFish),
+        Product(productName: "Говядина", 
+                price: 1.5,
+                shortDescription: "Нежная и сочная мякоть говядины. Мы вручную зачистили мясо от жилок, удалили пленки и излишки жира - чтобы ничто не отвлекало Вас от приготовления вкусных блюд. К слову, это тот продукт, который одинаково хорошо подойдет и для повседневного, и для праздничного меню. При этом говядина порадует вкусом и ароматом при минимуме усилий: мясо может замариновать в любимых специях и запечь цельным куском в фольге или пергаменте.",
+                imageName: "beef",
+                category: .meatAndFish),
+        Product(productName: "Филе куриной грудки",
+                price: 1.4,
+                shortDescription: "Отличный выбор для любителей нежного и полезного мяса. Филе не только обладает приятным вкусом и ароматом, но и богато белками и низкой калорийностью. Является идеальным продуктом для поддержки здорового питания, содержит малое количество жиров и сахаров, обеспечивая наш организм ценными питательными веществами, такими как белки, железо, цинк, калий, фосфор, витамины группы В.",
+                imageName: "chicken",
+                category: .meatAndFish),
+        Product(productName: "Сёмга",
+                price: 2,
+                shortDescription: "Сёмга  - морская рыба с высокой пищевой и биологической ценностью. Благодаря высокой концентрации йода семга способна оказывать положительное воздействие на функционирование щитовидной железы и всего организма в целом. Сёмгу можно приготовить на пару, мангале или пожарить на сковороде вместе со специями. В качестве гарнира выбирайте картофель либо свежие овощи. Гарантируем, что аппетитная сёмга станет главным блюдом обеденного стола.",
+                imageName: "salmon",
+                category: .meatAndFish),
     ]
     
     let fruitsAndVegetables: [Product] = [
-        Product(productName: "Яблоки", price: 1, shortDescription: "Crisp apple", category: .fruitsAndVegetables),
-        Product(productName: "Морковь", price: 0.5, shortDescription: "Fresh carrot", category: .fruitsAndVegetables),
-        Product(productName: "Томаты", price: 0.8, shortDescription: "Ripe tomato", category: .fruitsAndVegetables),
+        Product(productName: "Яблоки", 
+                price: 1, 
+                shortDescription: "Сочные, сладкие и душистые. Эти яблочки обосновано претендуют на роль десерта. А ещё наши покупатели отметили их симпатичность, с чем мы тоже согласны: небольшие румяные плоды здоровы смотрятся на фруктовой тарелке. ",
+                imageName: "apple",
+                category: .fruitsAndVegetables),
+        Product(productName: "Морковь",
+                price: 0.5, 
+                shortDescription: "Крепкая, сочная, сладкая морковь добавит ярких красок любому блюду. Но и главная роль ей вполне под силу. Например, на обед можно приготовить овощные котлеты. Для ужина отлично подойдет морковь, запеченная со специями. А чаепитие украсит морковный торт.",
+                imageName: "carrot",
+                category: .fruitsAndVegetables),
+        Product(productName: "Томаты", 
+                price: 0.8,
+                shortDescription: "Красные не только снаружи, но и внутри. Мякоть сочная и сладкая, с небольшой кислинкой. Можно есть просто так, добавлять в салаты, супы или вторые блюда.",
+                imageName: "tomato",
+                category: .fruitsAndVegetables),
     ]
     
     let groats: [Product] = [
-        Product(productName: "Рис", price: 2, shortDescription: "Long grain rice", category: .groats),
-        Product(productName: "Паста", price: 1.05, shortDescription: "Whole wheat pasta", category: .groats),
-        Product(productName: "Бобы", price: 1.2, shortDescription: "Canned beans", category: .groats),
+        Product(productName: "Круглозёрный рис",
+                price: 2,
+                shortDescription: "Круглозёрный рис отличается нежным вкусом и подойдёт для приготовления каш, запеканок, суши и роллов. Чтобы рис не слипся во время варки, его следует тщательно промыть.",
+                imageName: "rice",
+                category: .groats),
+        Product(productName: "Спагетти",
+                price: 1.05,
+                shortDescription: "Спагетти из твёрдых сортов пшеницы. Чистый состав — только мука и вода. Традиционно спагетти подают с томатным соусом или оливковым маслом, посыпая тёртым пармезаном.",
+                imageName: "spaghetti",
+                category: .groats),
+        Product(productName: "Красная фасоль",
+                price: 1.2,
+                shortDescription: "Фасоль красная - это популярная бобовая культура с ярким красным цветом и богатым питательным составом. Фасоль красная является отличным источником растительного белка, клетчатки, железа и других важных питательных веществ. Польза фасоли красной для организма включает регулирование уровня сахара в крови, снижение уровня холестерина, поддержание здоровой пищеварительной системы и укрепление иммунной системы. Её умеренное потребление связано с улучшением сердечно-сосудистого здоровья и снижением риска различных заболеваний.",
+                imageName: "beans",
+                category: .groats),
     ]
     
     // MARK: -  Приватный инициализатор, чтобы предотвратить создание дополнительных экземпляров класса
@@ -41,14 +100,14 @@ final class DataStore {
  // MARK: - тут метод для работы с перечислениями в tableview
 
 extension DataStore {
-        static func getAllCategories() -> [Categories] {
-            return [
-                .dairyProducts,
-                .bakery,
-                .meatAndFish,
-                .fruitsAndVegetables,
-                .groats
-            ]
-        }
+    static func getAllCategories() -> [Categories] {
+        return [
+            .dairyProducts,
+            .bakery,
+            .meatAndFish,
+            .fruitsAndVegetables,
+            .groats
+        ]
     }
+}
         

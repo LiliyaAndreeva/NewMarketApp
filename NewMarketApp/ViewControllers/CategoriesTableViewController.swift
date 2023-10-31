@@ -52,12 +52,13 @@ extension CategoriesTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
-        let category = allCategories[indexPath.row]
         var content = cell.defaultContentConfiguration()
-
+        
+        let category = allCategories[indexPath.row]
 
         content.text = category.rawValue
         cell.imageView?.image = UIImage(named: category.rawValue)
+        
         return cell
     }
 }

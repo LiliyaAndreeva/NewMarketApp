@@ -27,16 +27,24 @@ extension ProductsTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         products.count
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let tableViewWidth = tableView.bounds.width
+        let cellWidth = tableViewWidth * 0.3 // Например, ячейка будет занимать 40% ширины таблицы
+        return cellWidth
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "secondCell", for: indexPath)
-        let product = products[indexPath.row]
         var content = cell.defaultContentConfiguration()
+
+        let product = products[indexPath.row]
+        
         content.text = product.productName
         content.secondaryText = String(product.price)
+        content.image = UIImage(named: product.imageName)
+       
         cell.contentConfiguration = content
-        // Configure the cell...
-        
         return cell
     }
     
