@@ -21,6 +21,7 @@ struct Customer {
     let name: String
     let surname: String
     let email: String
+    let photo: String
     let cart = [Product?]()
     
     var fullname: String {
@@ -31,7 +32,8 @@ struct Customer {
         Customer(
             name: "Motherload",
             surname: "Team",
-            email: "motherload@icloud.com"
+            email: "motherload@icloud.com", 
+            photo: "personphoto"
         )
     }
 }

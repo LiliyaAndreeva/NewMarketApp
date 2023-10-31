@@ -42,11 +42,9 @@ extension ProductsTableViewController {
         
         content.text = product.productName
         content.secondaryText = String(product.price)
-//        cell.contentConfiguration = content
-
-        
-        cell.imageView?.image = UIImage(named: product.imageName)
-        content.image  = UIImage(named: product.imageName)
+        content.image = UIImage(named: product.imageName)
+       
+        cell.contentConfiguration = content
         return cell
     }
     
