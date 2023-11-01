@@ -97,7 +97,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="-"/>
                                                     <connections>
-                                                        <action selector="incrementDecrementButton:" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="Efn-c4-NxU"/>
+                                                        <action selector="addRemoveProduct:" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="0xZ-u8-oTS"/>
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wi-aF-PsN">
@@ -110,7 +110,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="+"/>
                                                     <connections>
-                                                        <action selector="incrementDecrementButton:" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="wX8-FD-lFu"/>
+                                                        <action selector="addRemoveProduct:" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="LHR-WQ-vAo"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lF-GJ-wQa">
@@ -133,12 +133,13 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="decrement" destination="s0O-qz-yxd" id="u0j-AK-pUG"/>
-                                    <outlet property="increment" destination="gsf-Rb-IYF" id="Y9r-J6-hyk"/>
+                                    <outlet property="decrement" destination="s0O-qz-yxd" id="ihw-L0-MFm"/>
+                                    <outlet property="increment" destination="gsf-Rb-IYF" id="7T5-WP-lKD"/>
                                     <outlet property="priceLabel" destination="ltH-g9-GXi" id="M6M-5C-3W2"/>
                                     <outlet property="productImage" destination="ORw-WP-2PW" id="YWq-Lo-4qY"/>
                                     <outlet property="productLabel" destination="e0P-5n-fSV" id="Nc8-VR-01v"/>
                                     <outlet property="quantityTextField" destination="0wi-aF-PsN" id="Zze-vz-HVb"/>
+                                    <segue destination="O1b-Am-VYo" kind="show" id="cgp-ZB-KtA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -185,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3M-c2-s4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4779" y="589"/>
+            <point key="canvasLocation" x="4607" y="588"/>
         </scene>
         <!--Команда-->
         <scene sceneID="iKb-t1-cUr">
@@ -317,7 +318,7 @@
                 <navigationController id="k0P-lI-fdM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Маркет" image="house.fill" catalog="system" id="bzh-VV-rpB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zhn-8O-A6i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

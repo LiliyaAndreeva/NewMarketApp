@@ -10,7 +10,7 @@ final class ProductsDescriptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor  = Styles.secondaryBrown
+        view.backgroundColor = Styles.secondaryBrown
         
         descriptLabel.text = product.shortDescription
     }

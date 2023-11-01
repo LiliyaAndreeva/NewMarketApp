@@ -31,7 +31,7 @@ final class CategoriesTableViewController: UITableViewController {
         default:
             selectedProducts = DataStore.shared.groats
         }
-        cartViewController?.products = selectedProducts
+//        cartViewController?.products = selectedProducts
         productsTableVC?.products = selectedProducts
     }
 
