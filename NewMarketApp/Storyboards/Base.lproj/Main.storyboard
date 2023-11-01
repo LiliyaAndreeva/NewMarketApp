@@ -97,7 +97,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="-"/>
                                                     <connections>
-                                                        <action selector="incrementDecrementButton:" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="Efn-c4-NxU"/>
+                                                        <action selector="addRemoveProduct:" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="0xZ-u8-oTS"/>
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wi-aF-PsN">
@@ -110,7 +110,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="+"/>
                                                     <connections>
-                                                        <action selector="incrementDecrementButton:" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="wX8-FD-lFu"/>
+                                                        <action selector="addRemoveProduct:" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="LHR-WQ-vAo"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lF-GJ-wQa">
@@ -133,12 +133,13 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="decrement" destination="s0O-qz-yxd" id="u0j-AK-pUG"/>
-                                    <outlet property="increment" destination="gsf-Rb-IYF" id="Y9r-J6-hyk"/>
+                                    <outlet property="decrement" destination="s0O-qz-yxd" id="ihw-L0-MFm"/>
+                                    <outlet property="increment" destination="gsf-Rb-IYF" id="7T5-WP-lKD"/>
                                     <outlet property="priceLabel" destination="ltH-g9-GXi" id="M6M-5C-3W2"/>
                                     <outlet property="productImage" destination="ORw-WP-2PW" id="YWq-Lo-4qY"/>
                                     <outlet property="productLabel" destination="e0P-5n-fSV" id="Nc8-VR-01v"/>
                                     <outlet property="quantityTextField" destination="0wi-aF-PsN" id="Zze-vz-HVb"/>
+                                    <segue destination="O1b-Am-VYo" kind="show" id="cgp-ZB-KtA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -185,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3M-c2-s4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4779" y="589"/>
+            <point key="canvasLocation" x="4607" y="588"/>
         </scene>
         <!--Команда-->
         <scene sceneID="iKb-t1-cUr">
@@ -369,7 +370,7 @@
                 <navigationController id="WzD-SF-Zkb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Корзина" image="basket.fill" catalog="system" id="lD5-Ui-8HK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LeB-Ah-Eb4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -701,16 +702,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="wmD-o5-a3X">
-                                <rect key="frame" x="34" y="405" width="246" height="27"/>
+                                <rect key="frame" x="39" y="405" width="242" height="27"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFt-Dr-4jR">
-                                        <rect key="frame" x="0.0" y="0.0" width="78" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFt-Dr-4jR">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="27"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-hC-FNm">
-                                        <rect key="frame" x="168" y="0.0" width="78" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-hC-FNm">
+                                        <rect key="frame" x="164" y="0.0" width="78" height="27"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
