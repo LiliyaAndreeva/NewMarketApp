@@ -317,7 +317,7 @@
                 <navigationController id="k0P-lI-fdM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Маркет" image="house.fill" catalog="system" id="bzh-VV-rpB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zhn-8O-A6i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -369,7 +369,7 @@
                 <navigationController id="WzD-SF-Zkb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Корзина" image="basket.fill" catalog="system" id="lD5-Ui-8HK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LeB-Ah-Eb4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -701,16 +701,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="wmD-o5-a3X">
-                                <rect key="frame" x="34" y="405" width="246" height="27"/>
+                                <rect key="frame" x="39" y="405" width="242" height="27"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFt-Dr-4jR">
-                                        <rect key="frame" x="0.0" y="0.0" width="78" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFt-Dr-4jR">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="27"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-hC-FNm">
-                                        <rect key="frame" x="168" y="0.0" width="78" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-hC-FNm">
+                                        <rect key="frame" x="164" y="0.0" width="78" height="27"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
