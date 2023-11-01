@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91N-kr-02G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91N-kr-02G">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -135,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="4779" y="589"/>
         </scene>
-        <!--Team-->
+        <!--Команда-->
         <scene sceneID="iKb-t1-cUr">
             <objects>
                 <viewController id="BS2-fp-65L" sceneMemberID="viewController">
@@ -253,19 +253,19 @@
                             <constraint firstItem="1yQ-5R-Ltc" firstAttribute="leading" secondItem="21p-8B-hfw" secondAttribute="leading" constant="16" id="xXB-Em-iQE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Team" image="person.3.fill" catalog="system" id="Nzg-IF-BbL"/>
+                    <tabBarItem key="tabBarItem" title="Команда" image="person.3.fill" catalog="system" id="Nzg-IF-BbL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMJ-9r-Gtq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="948.75" y="836.61971830985919"/>
         </scene>
-        <!--Market-->
+        <!--Маркет-->
         <scene sceneID="bW8-by-D28">
             <objects>
                 <navigationController id="k0P-lI-fdM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Market" image="house.fill" catalog="system" id="bzh-VV-rpB"/>
+                    <tabBarItem key="tabBarItem" title="Маркет" image="house.fill" catalog="system" id="bzh-VV-rpB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zhn-8O-A6i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -311,11 +311,11 @@
             </objects>
             <point key="canvasLocation" x="3879" y="-912"/>
         </scene>
-        <!--Cart-->
+        <!--Корзина-->
         <scene sceneID="pQu-h8-fRz">
             <objects>
                 <navigationController id="WzD-SF-Zkb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cart" image="basket.fill" catalog="system" id="lD5-Ui-8HK"/>
+                    <tabBarItem key="tabBarItem" title="Корзина" image="basket.fill" catalog="system" id="lD5-Ui-8HK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LeB-Ah-Eb4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -460,46 +460,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqf-Br-Or1">
-                                <rect key="frame" x="99" y="153" width="122" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqf-Br-Or1">
+                                <rect key="frame" x="108.5" y="153" width="103" height="45"/>
                                 <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="45"/>
                                 <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Wld-kH-c0Q">
-                                <rect key="frame" x="16" y="210.5" width="288" height="147"/>
+                                <rect key="frame" x="16" y="205.5" width="288" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etn-2F-eX9">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="20"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="25"/>
+                                        <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="25"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bB-un-v4h">
-                                        <rect key="frame" x="0.0" y="33" width="288" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Ваш e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bB-un-v4h">
+                                        <rect key="frame" x="0.0" y="38" width="288" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57P-VE-XuM">
-                                        <rect key="frame" x="0.0" y="80" width="288" height="20"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57P-VE-XuM">
+                                        <rect key="frame" x="0.0" y="85" width="288" height="25"/>
+                                        <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="25"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jiy-aU-toQ">
-                                        <rect key="frame" x="0.0" y="113" width="288" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Ваш пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jiy-aU-toQ">
+                                        <rect key="frame" x="0.0" y="123" width="288" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4Z-EE-7KS">
-                                <rect key="frame" x="90" y="439.5" width="140" height="38"/>
+                                <rect key="frame" x="90" y="444.5" width="140" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="a3y-cI-CPs"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Next">
+                                <buttonConfiguration key="configuration" style="filled" title="Войти">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                     <color key="baseBackgroundColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
@@ -674,10 +674,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Elizabeth" width="959" height="1280"/>
+        <image name="Elizabeth" width="640" height="640"/>
         <image name="Liliya" width="640" height="640"/>
-        <image name="Roman" width="591" height="587"/>
-        <image name="Tatyana" width="960" height="1280"/>
+        <image name="Roman" width="640" height="640"/>
+        <image name="Tatyana" width="640" height="640"/>
         <image name="Tim" width="640" height="640"/>
         <image name="apple" width="1080" height="1080"/>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
