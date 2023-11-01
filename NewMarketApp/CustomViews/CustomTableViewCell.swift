@@ -26,7 +26,6 @@ class CustomTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         priceLabel.text = "\(price)"
-        
         priceOfProductTF.text = priceLabel.text
     }
 
@@ -36,25 +35,67 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBAction func minusPlusButtonPressed(_ sender: UIButton) {
         
-        
         switch sender {
         case minusButton:
             if count > 0 {
                 count -= 1}
-            summa = price * count
-            priceOfProductTF.text = "\(summa)"
+            checkInTF()
             
         default:
             count += 1
-
-            summa = price * count
-            priceOfProductTF.text = "\(summa)"
+            checkInTF()
         }
+        
         productQuantityTF.text = "\(count)"
     }
-    // skjbfkjsgf
     
+    func checkInTF(){
+        summa = price * count
+        priceOfProductTF.text = "\(summa)"
+    }
+}
 
+extension CustomTableViewCell {
+    private func showAlert(withTitle title: String, andMessage message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = "1"
+            textField?.becomeFirstResponder()
+        }
+        alert.addAction(okAction)
+        //present(alert, animated: true)
+    }
+}
+
+
+
+// MARK: - UITextFieldDelegate
+extension CustomTableViewCell: UITextFieldDelegate {
     
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    } //убирает клавиатуру
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let text = textField.text else {
+            showAlert(withTitle: "Wrong format!", andMessage: "Please enter correct value")
+            return
+        }
+        guard let currentValue = Float(text), (1...100).contains(currentValue) else {
+            showAlert(
+                withTitle: "Wrong format!",
+                andMessage: "Please enter correct value",
+                textField: textField
+            )
+            return
+            
+        }
+        
+//        productQuantityTF.text = mutableSetValue(forKey: productQuantityTF)
+        
+        
+        
+        
+    }
+    
 }
