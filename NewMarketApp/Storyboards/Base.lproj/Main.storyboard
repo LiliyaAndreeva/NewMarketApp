@@ -317,7 +317,7 @@
                 <navigationController id="WzD-SF-Zkb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Корзина" image="basket.fill" catalog="system" id="lD5-Ui-8HK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LeB-Ah-Eb4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -540,7 +540,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pk5-WB-y8P">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="448"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="59" id="Gj7-Kd-4UK" customClass="CustomTableViewCell" customModule="NewMarketApp" customModuleProvider="target">
@@ -633,7 +633,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWK-Is-5D3">
-                                <rect key="frame" x="107" y="469" width="106" height="38"/>
+                                <rect key="frame" x="107" y="457" width="106" height="36.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Заказать">
@@ -648,19 +648,37 @@
                                     <segue destination="NOv-mr-0yU" kind="show" id="txF-QL-UPW"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="wmD-o5-a3X">
+                                <rect key="frame" x="34" y="405" width="246" height="27"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFt-Dr-4jR">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="27"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-hC-FNm">
+                                        <rect key="frame" x="168" y="0.0" width="78" height="27"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R8O-LI-ENk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YWK-Is-5D3" firstAttribute="height" secondItem="Yez-iw-6x6" secondAttribute="height" multiplier="0.0669014" id="23g-qe-lMd"/>
-                            <constraint firstItem="Pk5-WB-y8P" firstAttribute="leading" secondItem="R8O-LI-ENk" secondAttribute="leading" id="3db-98-XVC"/>
-                            <constraint firstItem="R8O-LI-ENk" firstAttribute="bottom" secondItem="YWK-Is-5D3" secondAttribute="bottom" constant="12" id="CoU-dm-zzj"/>
-                            <constraint firstItem="Pk5-WB-y8P" firstAttribute="trailing" secondItem="R8O-LI-ENk" secondAttribute="trailing" id="EUP-VL-tH2"/>
-                            <constraint firstItem="Pk5-WB-y8P" firstAttribute="centerX" secondItem="Yez-iw-6x6" secondAttribute="centerX" id="NRb-yc-v7V"/>
-                            <constraint firstItem="Pk5-WB-y8P" firstAttribute="top" secondItem="Yez-iw-6x6" secondAttribute="top" id="Rv0-kz-86u"/>
-                            <constraint firstItem="Pk5-WB-y8P" firstAttribute="height" secondItem="Yez-iw-6x6" secondAttribute="height" multiplier="0.788732" id="axo-Yc-otr"/>
-                            <constraint firstItem="YWK-Is-5D3" firstAttribute="width" secondItem="Yez-iw-6x6" secondAttribute="width" multiplier="0.33125" id="iY0-hJ-2qY"/>
-                            <constraint firstItem="YWK-Is-5D3" firstAttribute="centerX" secondItem="R8O-LI-ENk" secondAttribute="centerX" id="uRP-j9-2Mx"/>
+                            <constraint firstItem="Pk5-WB-y8P" firstAttribute="trailing" secondItem="R8O-LI-ENk" secondAttribute="trailing" id="0Dq-fg-i89"/>
+                            <constraint firstItem="Pk5-WB-y8P" firstAttribute="centerX" secondItem="Yez-iw-6x6" secondAttribute="centerX" id="3vw-kW-ZhE"/>
+                            <constraint firstItem="R8O-LI-ENk" firstAttribute="trailing" secondItem="wmD-o5-a3X" secondAttribute="trailing" constant="39" id="Bcq-cJ-tMV"/>
+                            <constraint firstItem="YWK-Is-5D3" firstAttribute="centerX" secondItem="Yez-iw-6x6" secondAttribute="centerX" id="Ps7-mE-lH6"/>
+                            <constraint firstItem="Pk5-WB-y8P" firstAttribute="top" secondItem="Yez-iw-6x6" secondAttribute="top" id="UUc-Uu-7Yi"/>
+                            <constraint firstItem="Pk5-WB-y8P" firstAttribute="leading" secondItem="R8O-LI-ENk" secondAttribute="leading" id="bVg-Gp-5eu"/>
+                            <constraint firstItem="wmD-o5-a3X" firstAttribute="leading" secondItem="R8O-LI-ENk" secondAttribute="leading" constant="39" id="dnv-5d-idP"/>
+                            <constraint firstItem="wmD-o5-a3X" firstAttribute="top" secondItem="Pk5-WB-y8P" secondAttribute="bottom" constant="33" id="n0H-F1-IW2"/>
+                            <constraint firstItem="R8O-LI-ENk" firstAttribute="bottom" secondItem="YWK-Is-5D3" secondAttribute="bottom" constant="25.5" id="yEo-PK-rya"/>
+                            <constraint firstItem="YWK-Is-5D3" firstAttribute="top" secondItem="wmD-o5-a3X" secondAttribute="bottom" constant="25" id="zMM-mL-wat"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Корзина" id="rcO-py-7dX"/>
