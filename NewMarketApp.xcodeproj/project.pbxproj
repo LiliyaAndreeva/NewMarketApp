@@ -25,6 +25,7 @@
 		72C7C71A2AEE6D51007DA0D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C7C7192AEE6D51007DA0D2 /* Assets.xcassets */; };
 		72C7C71D2AEE6D51007DA0D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C7C71B2AEE6D51007DA0D2 /* LaunchScreen.storyboard */; };
 		842390202AF03FCB00872078 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423901F2AF03FCB00872078 /* Product.swift */; };
+		842390242AF165C600872078 /* CustomProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842390232AF165C600872078 /* CustomProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		72C7C71C2AEE6D51007DA0D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72C7C71E2AEE6D51007DA0D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8423901F2AF03FCB00872078 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		842390232AF165C600872078 /* CustomProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				72A0AEC72AF0F9EC0064AE98 /* CustomTableViewCell.swift */,
+				842390232AF165C600872078 /* CustomProductTableViewCell.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				72A0AEAA2AEE6FD50064AE98 /* LoginViewController.swift in Sources */,
 				842390202AF03FCB00872078 /* Product.swift in Sources */,
 				72A0AEAD2AEE71670064AE98 /* Colors.swift in Sources */,
+				842390242AF165C600872078 /* CustomProductTableViewCell.swift in Sources */,
 				72A0AEB82AEEA8A40064AE98 /* CartViewController.swift in Sources */,
 				72A0AEC02AEEA9C50064AE98 /* OrderViewController.swift in Sources */,
 				72C7C7112AEE6D50007DA0D2 /* AppDelegate.swift in Sources */,

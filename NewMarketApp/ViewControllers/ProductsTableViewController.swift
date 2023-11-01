@@ -2,50 +2,65 @@
 
 import UIKit
 
-final class ProductsTableViewController: UITableViewController {
-
+final class ProductsTableViewController: UIViewController {
     var products: [Product]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor  = Styles.beige
+        view.backgroundColor = Styles.beige
+        
+//        tableView.register(CustomProductTableViewCell.self, forCellReuseIdentifier: "secondCell")
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+//        guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let descriptionVC = segue.destination as? ProductsDescriptionViewController
-        let selectedProduct = products[indexPath.row]
-        descriptionVC?.product = selectedProduct
+//        let selectedProduct = products[indexPath.row]
+//        descriptionVC?.product = selectedProduct
     }
-    
 }
 
-// MARK: - Table view data source
-
-extension ProductsTableViewController {
+extension ProductsTableViewController: UITableViewDataSource {
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         products.count
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let tableViewWidth = tableView.bounds.width
-        let cellWidth = tableViewWidth * 0.3 // Например, ячейка будет занимать 40% ширины таблицы
-        return cellWidth
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "secondCell", for: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "secondCell") as! CustomProductTableViewCell
         var content = cell.defaultContentConfiguration()
-
         let product = products[indexPath.row]
         
-        content.text = product.productName
-        content.secondaryText = String(product.price)
-        content.image = UIImage(named: product.imageName)
-       
-        cell.contentConfiguration = content
+        cell.priceLabel.text = "\(product.price) ₽"
+        cell.productLabel.text = product.productName
+        cell.imageView?.image = UIImage(named: product.imageName)
+
         return cell
     }
-    
+
 }
+
+extension ProductsTableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let tableViewWidth = tableView.bounds.width
+        let cellWidth = tableViewWidth * 0.15 // ячейка будет занимать % ширины таблицы
+        return cellWidth
+    }
+    
+    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "secondCell") as? CustomProductTableViewCell
+//        let product = products[section]
+//        cell?.productLabel.text = product.productName
+////        cell?.priceLabel.text = "\(product.price) ₽"
+//        
+//    
+//        return cell
+//    }
+}
+

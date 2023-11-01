@@ -13,7 +13,8 @@ final class CategoriesTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard  let indexPath = tableView.indexPathForSelectedRow else { return }
-        let productVC = segue.destination as? ProductsTableViewController
+        let productsTableVC = segue.destination as? ProductsTableViewController
+        let cartViewController = segue.destination as? CartViewController
         let selectedCategory = allCategories[indexPath.row]
         
         var selectedProducts: [Product]
@@ -30,8 +31,8 @@ final class CategoriesTableViewController: UITableViewController {
         default:
             selectedProducts = DataStore.shared.groats
         }
-        
-        productVC?.products = selectedProducts
+//        cartViewController?.products = selectedProducts
+        productsTableVC?.products = selectedProducts
     }
 
 }
