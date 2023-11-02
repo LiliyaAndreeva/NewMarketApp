@@ -21,15 +21,14 @@ final class CustomProductTableViewCell: UITableViewCell {
     @IBOutlet weak var decrement: UIButton!
     
     @IBOutlet weak var quantityTextField: UITextField!
-    
-    weak var delegate: CustomProductTableViewCellDelegate!
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     @IBAction func addToCart() {
-//        delegate?.getChoosenProducts(product, buttonPressed: increment)
+
+        print("add")
     }
     
     @IBAction func addRemoveProduct(_ sender: UIButton) {

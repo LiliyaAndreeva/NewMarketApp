@@ -5,10 +5,6 @@
 //  Created by Лилия Андреева on 29.10.2023.
 //
 
-protocol CustomProductTableViewCellDelegate: AnyObject {
-    func getChoosenProducts()
-}
-
 import UIKit
 
 class CartViewController: UIViewController {
@@ -41,7 +37,7 @@ extension CartViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CustomTableViewCell else { return CustomTableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomTableViewCell
 
         let product = productsInCart[indexPath.row]
         let price = price[indexPath.row]
@@ -107,11 +103,12 @@ extension CartViewController: UITextFieldDelegate {
                 textField: textField
             )
             return
+            
         }
+        
+        
+        
+        
     }
-}
-
-extension CartViewController: CustomProductTableViewCellDelegate {
-    func getChoosenProducts() {
-    }
+    
 }
