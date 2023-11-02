@@ -118,7 +118,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="tinted" image="cart.fill.badge.plus" catalog="system"/>
                                                     <connections>
-                                                        <action selector="addToCart:" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="O9G-ed-4A2"/>
+                                                        <action selector="addToCart" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="elg-8e-eUv"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
