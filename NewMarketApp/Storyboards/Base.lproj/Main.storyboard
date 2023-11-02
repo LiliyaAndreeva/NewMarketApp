@@ -117,6 +117,9 @@
                                                     <rect key="frame" x="103.5" y="0.0" width="54" height="34.5"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="tinted" image="cart.fill.badge.plus" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="addToCart:" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="O9G-ed-4A2"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -318,7 +321,7 @@
                 <navigationController id="k0P-lI-fdM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Маркет" image="house.fill" catalog="system" id="bzh-VV-rpB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zhn-8O-A6i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
