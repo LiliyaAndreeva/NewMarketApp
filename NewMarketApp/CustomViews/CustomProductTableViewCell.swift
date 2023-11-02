@@ -7,13 +7,10 @@
 
 import UIKit
 
-protocol CartDelegate {
-    func getIndex(_ index: Int) -> Int
-}
-
 final class CustomProductTableViewCell: UITableViewCell {
     var product: Product!
     var cart = [Product?]()
+    var products = [Product?]()
     
     @IBOutlet weak var productImage: UIImageView!
     
@@ -25,41 +22,29 @@ final class CustomProductTableViewCell: UITableViewCell {
     
     @IBOutlet weak var quantityTextField: UITextField!
     
+    weak var delegate: CustomProductTableViewCellDelegate!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    private var count = 1
-    private var price = 100
-    private var summa = 0
+    @IBAction func addToCart() {
+//        delegate?.getChoosenProducts(product, buttonPressed: increment)
+    }
     
     @IBAction func addRemoveProduct(_ sender: UIButton) {
-        
         switch sender {
         case increment:
-            cart.append(product)
+            products.append(product)
         default:
-            print("")
+            products.removeFirst()
         }
-        print(cart.count)
+        
+        print(products.count)
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 }
-
-            
-//extension CustomProductTableViewCell: UITableViewDelegate {
-////    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-////        tableView.indexPathForSelectedRow as?
-//        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-////          let product = products[indexPath.row]
-//            let index = tableView.indexPathForSelectedRow
-//            let product = products[index?.row ?? 0]
-//            cart.append(product)
-//            print(index)
-////          performSegue(withIdentifier: "showDetails", sender: product)
-//         }
-////    }
-//}
