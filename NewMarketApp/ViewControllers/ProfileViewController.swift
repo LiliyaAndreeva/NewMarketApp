@@ -21,9 +21,7 @@ final class ProfileViewController: UIViewController {
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
-    //@IBOutlet weak var nameLabel: UILabel!
-    //@IBOutlet weak var surnameLabel: UILabel!
-    //@IBOutlet weak var emailLabel: UILabel!
+    //weak var delegate: ProfileViewControllerDelegate?
     
     var user: User!
     
@@ -35,9 +33,10 @@ final class ProfileViewController: UIViewController {
         """
 
         userImage.image = UIImage(named: user.customer.photo)
-        //nameLabel.text = user.customer.name
-        //surnameLabel.text = user.customer.surname
-        //emailLabel.text = user.customer.email
+        
+        nameTextField.delegate = self
+        surnameTextField.delegate = self
+        emailTextField.delegate = self
         
         nameTextField.text = user.customer.name
         surnameTextField.text = user.customer.surname
@@ -45,12 +44,18 @@ final class ProfileViewController: UIViewController {
     }
 }
 
-//extension ProfileViewController: UITextFieldDelegate {
-    //func tetete(_ textField: UITextField) {
-       // if textField == nameTextField {
-        //    user.customer.name = textField.text ?? ""
-       // } else {
-      //      user.customer.surname = textField.text ?? ""
-       // }
-    //}
-//}
+extension ProfileViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+       if textField == nameTextField {
+        user.customer.name = textField.text ?? ""
+        } else if textField == surnameTextField {
+            user.customer.surname = textField.text ?? ""
+        } else {
+            user.customer.email = textField.text ?? ""
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+}
