@@ -7,9 +7,9 @@
 
 import UIKit
 
-protocol CartDelegate {
-    func getIndex(_ index: Int) -> Int
-}
+//protocol CartDelegate {
+//    func getIndex(_ index: Int) -> Int
+//}
 
 final class CustomProductTableViewCell: UITableViewCell {
     var product: Product!

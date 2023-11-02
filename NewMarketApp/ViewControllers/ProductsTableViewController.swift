@@ -50,10 +50,4 @@ extension ProductsTableViewController {
 }
 
 
-extension ProductsTableViewController: CartDelegate {
-    func getIndex(_ index: Int) -> Int {
-        index
-    }
     
-    
-}
