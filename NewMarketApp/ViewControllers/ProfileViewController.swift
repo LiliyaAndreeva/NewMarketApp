@@ -17,9 +17,13 @@ final class ProfileViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var surnameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var surnameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    //@IBOutlet weak var nameLabel: UILabel!
+    //@IBOutlet weak var surnameLabel: UILabel!
+    //@IBOutlet weak var emailLabel: UILabel!
     
     var user: User!
     
@@ -31,8 +35,22 @@ final class ProfileViewController: UIViewController {
         """
 
         userImage.image = UIImage(named: user.customer.photo)
-        nameLabel.text = user.customer.name
-        surnameLabel.text = user.customer.surname
-        emailLabel.text = user.customer.email
+        //nameLabel.text = user.customer.name
+        //surnameLabel.text = user.customer.surname
+        //emailLabel.text = user.customer.email
+        
+        nameTextField.text = user.customer.name
+        surnameTextField.text = user.customer.surname
+        emailTextField.text = user.customer.email
     }
 }
+
+//extension ProfileViewController: UITextFieldDelegate {
+    //func tetete(_ textField: UITextField) {
+       // if textField == nameTextField {
+        //    user.customer.name = textField.text ?? ""
+       // } else {
+      //      user.customer.surname = textField.text ?? ""
+       // }
+    //}
+//}

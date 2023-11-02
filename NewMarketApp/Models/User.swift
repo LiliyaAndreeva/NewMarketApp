@@ -6,7 +6,7 @@ struct User {
     let userId = UUID()
     let username: String
     let password: String
-    let customer: Customer
+    var customer: Customer
 
     static func getUser() -> User {
         User(
@@ -18,9 +18,9 @@ struct User {
 }
 
 struct Customer {
-    let name: String
-    let surname: String
-    let email: String
+    var name: String
+    var surname: String
+    var email: String
     let photo: String
     let cart = [Product?]()
     
