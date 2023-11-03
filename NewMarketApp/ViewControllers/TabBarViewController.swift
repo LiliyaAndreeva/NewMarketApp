@@ -9,7 +9,7 @@ import UIKit
 
 final class TabBarViewController: UITabBarController {
     var user: User!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let appearance = UITabBarAppearance()
@@ -25,14 +25,15 @@ final class TabBarViewController: UITabBarController {
         viewControllers.forEach {
             if let userVC = $0 as? ProfileViewController {
                 userVC.user = user
+                
             } else if let navigationVC = $0 as? UINavigationController {
                 let cartInfoVC = navigationVC.topViewController
-                guard let cartInfoVC = cartInfoVC as? CartViewController else {
-                    return
+                
+                if  let cartInfoVC = cartInfoVC as? CartViewController{
+                    cartInfoVC.user = user
                 }
-                //cartInfoVC.
             }
         }
     }
-
 }
+
