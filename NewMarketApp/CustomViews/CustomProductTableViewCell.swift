@@ -12,6 +12,7 @@ final class CustomProductTableViewCell: UITableViewCell {
     var cart = [Product?]()
     var products = [Product?]()
     
+    @IBOutlet weak var numberOfProductsTF: UITextField!
     @IBOutlet weak var productImage: UIImageView!
     
     @IBOutlet weak var productLabel: UILabel!
@@ -34,15 +35,24 @@ final class CustomProductTableViewCell: UITableViewCell {
     @IBAction func addRemoveProduct(_ sender: UIButton) {
         switch sender {
         case increment:
-            products.append(product)
+            Basket.shared.posrednik.append(product)
+            Basket.shared.numberOfProductsInCart += 1
+             numberOfProductsTF.text = String( Basket.shared.numberOfProductsInCart)
         default:
-            products.removeFirst()
+            if let index = Basket.shared.posrednik.firstIndex(where: { $0.productId == product.productId }) {
+                Basket.shared.posrednik.remove(at: index)
+                Basket.shared.numberOfProductsInCart -= 1
+                numberOfProductsTF.text = String( Basket.shared.numberOfProductsInCart)
+            }
         }
         
-        print(products.count)
+        print(Basket.shared.posrednik.count)
         
     }
-
+    @IBAction func addToBasket(_ sender: Any) {
+        Basket.shared.cartProducts = Basket.shared.posrednik
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

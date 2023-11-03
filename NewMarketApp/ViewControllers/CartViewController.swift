@@ -36,11 +36,8 @@ class CartViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // При возвращении на этот экран
-        if let selectedProduct = Musorka.shared.selectedProduct {
-            products.append(selectedProduct)
-            Musorka.shared.selectedProduct = nil
+            products = Basket.shared.cartProducts
             mainTable.reloadData()
-        }
     }
     
     override func viewDidLayoutSubviews() {
