@@ -12,8 +12,10 @@ class CartViewController: UIViewController {
     var products: [Product] = []
     var user: User!
     
-    private var productsInCart = ["Хлеб", "Молоко", "Яйца", "Торт", "Курица", "Гречка", "Рис"]
-    private var price = ["100", "200", "150", "250", "300", "500", "700"]
+    @IBOutlet weak var mainTable: UITableView!
+    
+//    private var productsInCart = ["Хлеб", "Молоко", "Яйца", "Торт", "Курица", "Гречка", "Рис"]
+//    private var price = ["100", "200", "150", "250", "300", "500", "700"]
     
     @IBOutlet weak var bottomOrder: UIButton!
     
@@ -50,15 +52,17 @@ class CartViewController: UIViewController {
 // MARK: - UITableViewDataSourse
 extension CartViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        productsInCart.count
+        products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomTableViewCell /*else { return UITableViewCell() }*/
         
-        //let product = productsInCart[indexPath.row]
+      
         //let price = price[indexPath.row]
-        cell.productLabel.text = productsInCart[indexPath.row]
+        let product = products[indexPath.row]
+        cell.productLabel.text = product.productName
+        cell.imageView?.image = UIImage(named: product.imageName)
         // cell.priceLabel.text = price[ind]
         //cell.imageView?.image = UIImage(named: user.)
         //
@@ -103,7 +107,7 @@ extension CartViewController: UITextFieldDelegate {
             showAlert(withTitle: "Wrong format!", andMessage: "Please enter correct value")
             return
         }
-        guard let currentValue = Float(text), (1...100).contains(currentValue) else {
+        guard let currentValue = Int(text)  else {
             showAlert(
                 withTitle: "Wrong format!",
                 andMessage: "Please enter correct value",
