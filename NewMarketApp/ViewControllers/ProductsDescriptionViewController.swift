@@ -2,9 +2,6 @@
 
 import UIKit
 
-protocol cartDelegate: AnyObject {
-    func addToCart(prod: Product)
-}
 
 final class ProductsDescriptionViewController: UIViewController {
     
@@ -23,6 +20,6 @@ final class ProductsDescriptionViewController: UIViewController {
     }
   
     @IBAction func addToCartDidTapped(_ sender: UIButton) {
-        Musorka.shared.selectedProduct = product
+        Basket.shared.selectedProduct = product
     }
 }

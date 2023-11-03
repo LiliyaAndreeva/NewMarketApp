@@ -112,11 +112,13 @@ extension DataStore {
 }
         
 
-class Musorka {
-    static let shared = Musorka()
+class Basket {
+    static let shared = Basket()
     
     var selectedProduct: Product?
     var cartProducts: [Product] = []
+    var posrednik: [Product] = []
+    var numberOfProductsInCart = 0
     
     private init() {}
 }

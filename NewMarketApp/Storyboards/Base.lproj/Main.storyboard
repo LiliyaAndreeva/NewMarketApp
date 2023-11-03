@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91N-kr-02G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91N-kr-02G">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,7 +53,7 @@
         <scene sceneID="4Hw-1C-dkT">
             <objects>
                 <tableViewController id="srZ-Uo-rZW" userLabel="ProductsList" customClass="ProductsTableViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="TuN-3z-2pv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="TuN-3z-2pv" userLabel="TableView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -118,6 +118,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="tinted" image="cart.fill.badge.plus" catalog="system"/>
                                                     <connections>
+                                                        <action selector="addToBasket:" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="h8N-TM-x6y"/>
                                                         <action selector="addToCart" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="elg-8e-eUv"/>
                                                     </connections>
                                                 </button>
@@ -138,6 +139,7 @@
                                 <connections>
                                     <outlet property="decrement" destination="s0O-qz-yxd" id="ihw-L0-MFm"/>
                                     <outlet property="increment" destination="gsf-Rb-IYF" id="7T5-WP-lKD"/>
+                                    <outlet property="numberOfProductsTF" destination="0wi-aF-PsN" id="Omu-Zw-Xt6"/>
                                     <outlet property="priceLabel" destination="ltH-g9-GXi" id="M6M-5C-3W2"/>
                                     <outlet property="productImage" destination="ORw-WP-2PW" id="YWq-Lo-4qY"/>
                                     <outlet property="productLabel" destination="e0P-5n-fSV" id="Nc8-VR-01v"/>
@@ -180,15 +182,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="H5B-mH-b5M">
-                                <rect key="frame" x="79.5" y="280" width="161" height="34"/>
+                                <rect key="frame" x="133" y="280" width="54" height="34"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em9-q7-jSY">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="cart.badge.minus" catalog="system"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWv-dz-SiK">
-                                        <rect key="frame" x="107" y="0.0" width="54" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="34"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="cart.fill.badge.plus" catalog="system"/>
                                         <connections>
@@ -218,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3M-c2-s4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4606.875" y="587.32394366197184"/>
+            <point key="canvasLocation" x="4774" y="588"/>
         </scene>
         <!--Команда-->
         <scene sceneID="iKb-t1-cUr">
@@ -350,7 +347,7 @@
                 <navigationController id="k0P-lI-fdM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Маркет" image="house.fill" catalog="system" id="bzh-VV-rpB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zhn-8O-A6i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -807,7 +804,6 @@
         <image name="Tim" width="640" height="640"/>
         <image name="apple" width="1080" height="1080"/>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
-        <image name="cart.badge.minus" catalog="system" width="128" height="106"/>
         <image name="cart.fill.badge.plus" catalog="system" width="128" height="106"/>
         <image name="checkmark.seal" catalog="system" width="128" height="124"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
