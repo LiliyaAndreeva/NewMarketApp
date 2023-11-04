@@ -117,8 +117,7 @@ class Basket {
     
     var selectedProduct: Product?
     var cartProducts: [Product] = []
-    var posrednik: [Product] = []
-    var numberOfProductsInCart = 0
+    var intermediaryArray: [Product] = []
     
     private init() {}
 }

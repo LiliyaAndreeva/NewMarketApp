@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class CartViewCell: UITableViewCell {
     
     @IBOutlet weak var productLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -19,18 +19,16 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var productQuantityTF: UITextField!
     
-    
-    //private var count = Int(productQuantityTF ?? 1)
     private var count = 1
     private var price = 100
-    private var summa = 0
+    private var sum = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
         priceLabel.text = "\(price)"
         priceOfProductLabel.text = priceLabel.text
         setupTF()
-        checkInTF()
+        calculateАmount()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -44,29 +42,25 @@ class CustomTableViewCell: UITableViewCell {
             if count > 0 {
                 count -= 1
             }
-            checkInTF()
-            
         default:
             count += 1
-            checkInTF()
         }
-       productQuantityTF.text = "\(count)"
+        calculateАmount()
     }
 }
 
 // MARK: - extensions
-extension CustomTableViewCell {
+extension CartViewCell {
     
-    private func checkInTF(){
-        summa = price * count
-        priceOfProductLabel.text = "\(summa)"
+    private func calculateАmount(){
+        sum = price * count
+        priceOfProductLabel.text = "\(sum)"
+        productQuantityTF.text = "\(count)"
     }
 }
 
-
-
 // MARK: - UITextFieldDelegate
-extension CustomTableViewCell: UITextFieldDelegate {
+extension CartViewCell: UITextFieldDelegate {
     
     private func setupTF() {
         productQuantityTF.delegate = self
@@ -75,9 +69,9 @@ extension CustomTableViewCell: UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if (0..<999).contains(Float(textField.text ?? "") ?? 0) {
-  
+            
             count = Int(textField.text ?? "") ?? 1
-            checkInTF()
+            calculateАmount()
         }
     }
 }
