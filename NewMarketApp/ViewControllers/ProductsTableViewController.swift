@@ -51,7 +51,9 @@ extension ProductsTableViewController {
         cell.priceLabel.text = "\(product.price) ₽"
         cell.productLabel.text = product.productName
         cell.imageView?.image = UIImage(named: product.imageName)
+        cell.contentView.backgroundColor = view.backgroundColor
         cell.product = product
+        
         return cell
     }
 }

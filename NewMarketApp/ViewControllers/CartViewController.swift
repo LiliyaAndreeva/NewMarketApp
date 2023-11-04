@@ -76,6 +76,8 @@ extension CartViewController: UITableViewDataSource {
         cell.productQuantityTF.text = String(productsCount[product] ?? 0)
         cell.imageView?.image = UIImage(named: product.imageName)
         
+        cell.contentView.backgroundColor = view.backgroundColor
+        
         return cell
     }
     
