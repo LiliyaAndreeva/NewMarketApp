@@ -32,9 +32,10 @@ class CartViewController: UIViewController {
         
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         // При возвращении на этот экран
         products = Basket.shared.cartProducts
-        mainTable.reloadData()
+        productsCount.removeAll()
         
         // Создание словаря Продукт - количество
         for product in products {
@@ -44,6 +45,7 @@ class CartViewController: UIViewController {
                 productsCount[product] = 1
             }
         }
+        mainTable.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
