@@ -45,6 +45,7 @@ extension CategoriesCollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         let category = allCategories[indexPath.row]
         cell.imageView.image = UIImage(named: category.rawValue)
+        cell.imageView.layer.cornerRadius = 20
         return cell
     }
     
@@ -53,3 +54,4 @@ extension CategoriesCollectionViewController {
         performSegue(withIdentifier: "cellCategory", sender: selectedCategory)
     }
 }
+

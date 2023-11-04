@@ -17,11 +17,9 @@ final class ProfileViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var surnameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    
-    //weak var delegate: ProfileViewControllerDelegate?
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var surnameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     var user: User!
     
@@ -34,28 +32,8 @@ final class ProfileViewController: UIViewController {
 
         userImage.image = UIImage(named: user.customer.photo)
         
-        nameTextField.delegate = self
-        surnameTextField.delegate = self
-        emailTextField.delegate = self
-        
-        nameTextField.text = user.customer.name
-        surnameTextField.text = user.customer.surname
-        emailTextField.text = user.customer.email
-    }
-}
-
-extension ProfileViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-       if textField == nameTextField {
-        user.customer.name = textField.text ?? ""
-        } else if textField == surnameTextField {
-            user.customer.surname = textField.text ?? ""
-        } else {
-            user.customer.email = textField.text ?? ""
-        }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        nameLabel.text = user.customer.name
+        surnameLabel.text = user.customer.surname
+        emailLabel.text = user.customer.email
     }
 }
