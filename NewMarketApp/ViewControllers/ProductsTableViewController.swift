@@ -3,6 +3,9 @@
 import UIKit
 
 final class ProductsTableViewController: UITableViewController {
+    
+    
+    
     var products: [Product]!
     
     override func viewDidLoad() {
@@ -15,6 +18,21 @@ final class ProductsTableViewController: UITableViewController {
         let descriptionVC = segue.destination as? ProductsDescriptionViewController
         let selectedProduct = products[indexPath.row]
         descriptionVC?.product = selectedProduct
+    }
+    
+    
+    @IBAction func cartButtonPressed(_ sender: UIButton) {
+        showAlert(
+            title: "Товар успешно добавлен в корзину",
+            message: "Вы можете перейти к оформлению заказа или продолжить покупки"
+        )
+    }
+    
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
 
