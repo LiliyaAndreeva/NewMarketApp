@@ -58,6 +58,12 @@ final class ProductViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 }
+
+
+
+
+
+
 //extension ProductViewCell {
 //   
 //    private func showAlert(withTitle title: String, andMessage message: String) {

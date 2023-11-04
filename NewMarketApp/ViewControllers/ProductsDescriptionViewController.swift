@@ -20,6 +20,15 @@ final class ProductsDescriptionViewController: UIViewController {
     }
   
     @IBAction func addToCartDidTapped(_ sender: UIButton) {
-        Basket.shared.selectedProduct = product
+        Basket.shared.cartProducts.append(product)
+        showAlert(with: "Товар успешно добавлен в корзину", and: "Вы можете перейти к оформлению заказа или продолжить покупки")
     }
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        present(alert, animated: true)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(okAction)
+    }
+    
 }
+
