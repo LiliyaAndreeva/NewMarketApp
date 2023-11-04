@@ -79,6 +79,7 @@
                                                     <buttonConfiguration key="configuration" style="tinted" image="cart.fill.badge.plus" catalog="system"/>
                                                     <connections>
                                                         <action selector="addOrRemoveProductFromCart" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="tvS-lj-Twc"/>
+                                                        <action selector="cartButtonPressed:" destination="srZ-Uo-rZW" eventType="touchUpInside" id="zou-2v-7UV"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -817,7 +818,7 @@
         <image name="Tim" width="640" height="640"/>
         <image name="apple" width="1080" height="1080"/>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
-        <image name="cart.fill.badge.plus" catalog="system" width="32" height="32"/>
+        <image name="cart.fill.badge.plus" catalog="system" width="128" height="106"/>
         <image name="checkmark.seal" catalog="system" width="128" height="124"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="person.3.fill" catalog="system" width="128" height="66"/>
