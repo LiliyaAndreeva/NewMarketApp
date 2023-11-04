@@ -18,6 +18,8 @@ class CartViewController: UIViewController {
     @IBOutlet weak var mainTable: UITableView!
     @IBOutlet weak var bottomOrder: UIButton!
     
+    @IBOutlet weak var totalSumLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Styles.secondaryBrown
@@ -26,8 +28,8 @@ class CartViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let porderVC = segue.destination as? OrderViewController else { return }
-        porderVC.user = user
+        guard let orderVC = segue.destination as? OrderViewController else { return }
+        orderVC.user = user
     }
         
     override func viewWillAppear(_ animated: Bool) {
@@ -65,9 +67,9 @@ extension CartViewController: UITableViewDataSource {
        
         let uniqProducts = productsCount.map{ $0.key }
         let product = uniqProducts[indexPath.row]
-                
+        
         cell.productLabel.text = product.productName
-//        cell.priceLabel.text = "\(product.price * Double(productsCount[product] ?? 0))"
+        cell.priceLabel.text = "\(product.price) ₽"
         let productPrice = product.price * Double(productsCount[product] ?? 0)
         cell.priceOfProductLabel.text = String(format: "%.2f", productPrice) + " ₽"
 
@@ -84,10 +86,17 @@ extension CartViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension CartViewController{
+extension CartViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let tableViewWidth = tableView.bounds.width
+        let cellWidth = tableViewWidth * 0.15 // ячейка будет занимать % ширины таблицы
+        return cellWidth
+    }
+
 }
 
 // MARK: - UITextFieldDelegate
@@ -97,30 +106,6 @@ extension CartViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
     } //убирает клавиатуру
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let text = textField.text else {
-            showAlert(withTitle: "Wrong format!", andMessage: "Please enter correct value")
-            return
-        }
-        
-        guard let currentValue = Int(text)  else {
-            showAlert(
-                withTitle: "Wrong format!",
-                andMessage: "Please enter correct value",
-                textField: textField
-            )
-            return
-        }
-    }
     
-    private func showAlert(withTitle title: String, andMessage message: String, textField: UITextField? = nil) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            textField?.text = "1"
-            textField?.becomeFirstResponder()
-        }
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
 }
 
