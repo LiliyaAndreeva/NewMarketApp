@@ -25,7 +25,7 @@ extension ProductsTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "secondCell") as? CustomProductTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "secondCell") as? ProductViewCell else { return UITableViewCell() }
 
         let product = products[indexPath.row]
         
@@ -48,4 +48,6 @@ extension ProductsTableViewController {
         return cellWidth
     }
 }
+
+
 
