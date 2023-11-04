@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct Product {
+struct Product: Hashable {
     let productId = UUID()
     let productName: String
     let price: Double
