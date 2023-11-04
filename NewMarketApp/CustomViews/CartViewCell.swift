@@ -20,12 +20,13 @@ class CartViewCell: UITableViewCell {
     @IBOutlet weak var productQuantityTF: UITextField!
     
     private var count = 1
-    private var price = 100
-    private var sum = 0
+    private var sum = 0.0
+    
+    var productsCount = [Product: Int]()
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        priceLabel.text = "\(price)"
         priceOfProductLabel.text = priceLabel.text
         setupTF()
         calculateАmount()
@@ -44,6 +45,7 @@ class CartViewCell: UITableViewCell {
             }
         default:
             count += 1
+            
         }
         calculateАmount()
     }
@@ -53,8 +55,16 @@ class CartViewCell: UITableViewCell {
 extension CartViewCell {
     
     private func calculateАmount(){
-        sum = price * count
-        priceOfProductLabel.text = "\(sum)"
+        
+        for product in Basket.shared.cartProducts {
+            if let productCount = productsCount[product] {
+                productsCount.updateValue(productCount + 1, forKey: product)
+                sum = product.price * Double(count)
+            } else {
+                productsCount[product] = 1
+            }
+        }
+        priceOfProductLabel.text = String(format: "%.2f", sum) + " ₽"
         productQuantityTF.text = "\(count)"
     }
 }

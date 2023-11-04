@@ -28,15 +28,16 @@ final class ProductsTableViewController: UITableViewController {
         )
     }
     
+}
+
+extension ProductsTableViewController {
+    
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-}
-
-extension ProductsTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         products.count
