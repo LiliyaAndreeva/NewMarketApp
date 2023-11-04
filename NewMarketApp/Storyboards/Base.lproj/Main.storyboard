@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91N-kr-02G">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,15 +14,15 @@
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="srZ-Uo-rZW" userLabel="ProductsList" customClass="ProductsTableViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="TuN-3z-2pv" userLabel="TableView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondCell" rowHeight="59" id="4Yq-r4-5Z2" customClass="ProductViewCell" customModule="NewMarketApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="375" height="59"/>
+                                <rect key="frame" x="0.0" y="50" width="320" height="59"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Yq-r4-5Z2" id="x5G-Pq-cGk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ORw-WP-2PW">
@@ -50,10 +50,11 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nls-9I-afc">
-                                            <rect key="frame" x="204" y="12.5" width="157.5" height="34.5"/>
+                                            <rect key="frame" x="149" y="12.5" width="157.5" height="34.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0O-qz-yxd">
                                                     <rect key="frame" x="0.0" y="0.0" width="32" height="34.5"/>
+                                                    <color key="tintColor" red="0.45882886649999999" green="0.2826375961" blue="0.26271679999999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="-"/>
                                                     <connections>
@@ -67,6 +68,7 @@
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsf-Rb-IYF">
                                                     <rect key="frame" x="69" y="0.0" width="34.5" height="34.5"/>
+                                                    <color key="tintColor" red="0.45882886649999999" green="0.2826375961" blue="0.26271679999999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="+"/>
                                                     <connections>
@@ -75,8 +77,11 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lF-GJ-wQa">
                                                     <rect key="frame" x="103.5" y="0.0" width="54" height="34.5"/>
+                                                    <color key="tintColor" red="0.45882886649999999" green="0.2826375961" blue="0.26271679999999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="tinted" image="cart.fill.badge.plus" catalog="system"/>
+                                                    <buttonConfiguration key="configuration" style="tinted" image="cart.fill.badge.plus" catalog="system">
+                                                        <color key="baseBackgroundColor" red="0.72416460510000003" green="0.62775605919999999" blue="0.59604221580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </buttonConfiguration>
                                                     <connections>
                                                         <action selector="addOrRemoveProductFromCart" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="tvS-lj-Twc"/>
                                                         <action selector="cartButtonPressed:" destination="srZ-Uo-rZW" eventType="touchUpInside" id="zou-2v-7UV"/>
@@ -124,17 +129,11 @@
             <objects>
                 <viewController id="O1b-Am-VYo" userLabel="DescribtionOfProduct" customClass="ProductsDescriptionViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fde-Tv-ya0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRQ-bo-RAI">
-                                <rect key="frame" x="16" y="330.5" width="343" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8n5-gf-pkm">
-                                <rect key="frame" x="87.5" y="64" width="200" height="200"/>
+                                <rect key="frame" x="60" y="64" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8n5-gf-pkm" secondAttribute="height" multiplier="1:1" id="141-ox-jj3"/>
                                     <constraint firstAttribute="height" constant="200" id="Gr4-co-6kY"/>
@@ -142,71 +141,87 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="H5B-mH-b5M">
-                                <rect key="frame" x="76.5" y="280" width="222" height="34.5"/>
+                                <rect key="frame" x="51" y="280" width="218" height="34.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWv-dz-SiK">
-                                        <rect key="frame" x="0.0" y="0.0" width="222" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="218" height="34.5"/>
                                         <color key="backgroundColor" red="0.45882886649999999" green="0.2826375961" blue="0.26271679999999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="cart.fill.badge.plus" catalog="system" title="  Добавить в корзину"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="cart.circle.fill" catalog="system" title="  Добавить в корзину"/>
                                         <connections>
                                             <action selector="addToCartDidTapped:" destination="O1b-Am-VYo" eventType="touchUpInside" id="OSw-fj-X7g"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpU-zQ-YLK">
+                                <rect key="frame" x="45" y="345" width="230" height="19"/>
+                                <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRQ-bo-RAI">
+                                <rect key="frame" x="45" y="372" width="230" height="17"/>
+                                <fontDescription key="fontDescription" name="STIXTwoMath-Regular" family="STIX Two Math" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mp9-1x-YtW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.72416460510000003" green="0.62775605919999999" blue="0.59604221580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Mp9-1x-YtW" firstAttribute="trailing" secondItem="gRQ-bo-RAI" secondAttribute="trailing" constant="16" id="Cu3-33-4Qm"/>
-                            <constraint firstItem="gRQ-bo-RAI" firstAttribute="top" secondItem="H5B-mH-b5M" secondAttribute="bottom" constant="16" id="D7L-10-jAA"/>
+                            <constraint firstItem="Mp9-1x-YtW" firstAttribute="trailing" secondItem="bpU-zQ-YLK" secondAttribute="trailing" constant="45" id="Swa-Fd-Ldc"/>
+                            <constraint firstItem="bpU-zQ-YLK" firstAttribute="leading" secondItem="Mp9-1x-YtW" secondAttribute="leading" constant="45" id="UcT-TR-mdM"/>
                             <constraint firstItem="8n5-gf-pkm" firstAttribute="centerX" secondItem="Mp9-1x-YtW" secondAttribute="centerX" id="dsI-8o-VJp"/>
+                            <constraint firstItem="Mp9-1x-YtW" firstAttribute="trailing" secondItem="gRQ-bo-RAI" secondAttribute="trailing" constant="45" id="gWI-Yp-G6j"/>
+                            <constraint firstItem="gRQ-bo-RAI" firstAttribute="leading" secondItem="Mp9-1x-YtW" secondAttribute="leading" constant="45" id="h8H-jJ-ddU"/>
+                            <constraint firstItem="gRQ-bo-RAI" firstAttribute="top" secondItem="bpU-zQ-YLK" secondAttribute="bottom" constant="8" symbolic="YES" id="nBR-sI-aBR"/>
                             <constraint firstItem="H5B-mH-b5M" firstAttribute="centerX" secondItem="Mp9-1x-YtW" secondAttribute="centerX" id="nX4-IK-RwC"/>
                             <constraint firstItem="8n5-gf-pkm" firstAttribute="top" secondItem="Mp9-1x-YtW" secondAttribute="top" constant="20" id="vQ9-bU-xzK"/>
                             <constraint firstItem="H5B-mH-b5M" firstAttribute="top" secondItem="8n5-gf-pkm" secondAttribute="bottom" constant="16" id="wi1-K6-O1t"/>
-                            <constraint firstItem="gRQ-bo-RAI" firstAttribute="leading" secondItem="Mp9-1x-YtW" secondAttribute="leading" constant="16" id="xsq-3T-zlZ"/>
+                            <constraint firstItem="bpU-zQ-YLK" firstAttribute="top" secondItem="H5B-mH-b5M" secondAttribute="bottom" constant="30.5" id="yZW-0J-QV3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2lK-Mh-bgq"/>
                     <connections>
+                        <outlet property="addToCartButton" destination="NWv-dz-SiK" id="CcC-Uy-uqa"/>
                         <outlet property="descriptLabel" destination="gRQ-bo-RAI" id="FVK-Zz-DhP"/>
                         <outlet property="imageOfProduct" destination="8n5-gf-pkm" id="Mcp-Ld-5Ok"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3M-c2-s4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4460" y="589"/>
+            <point key="canvasLocation" x="4460" y="588.75562218890559"/>
         </scene>
         <!--Команда-->
         <scene sceneID="iKb-t1-cUr">
             <objects>
                 <viewController id="BS2-fp-65L" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w8y-oi-Xd3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Над проектом работали:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOv-CR-sZK">
-                                <rect key="frame" x="40" y="16" width="295" height="23"/>
+                                <rect key="frame" x="40" y="16" width="240" height="23"/>
                                 <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="23"/>
                                 <color key="textColor" red="0.48627450980392156" green="0.27450980392156865" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1yQ-5R-Ltc">
-                                <rect key="frame" x="16" y="69" width="343" height="489.5"/>
+                                <rect key="frame" x="16" y="69" width="288" height="417"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gdI-71-R5C">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="91.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="77"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Liliya" translatesAutoresizingMaskIntoConstraints="NO" id="5qY-8Y-K7S">
-                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="5qY-8Y-K7S" secondAttribute="height" multiplier="1:1" id="JW6-5Y-jGd"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Лилия Андреева" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibz-fr-hxQ">
-                                                <rect key="frame" x="99.5" y="37.5" width="243.5" height="17"/>
+                                                <rect key="frame" x="85" y="30" width="203" height="17"/>
                                                 <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -214,16 +229,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BUQ-Tw-03c">
-                                        <rect key="frame" x="0.0" y="99.5" width="343" height="91.5"/>
+                                        <rect key="frame" x="0.0" y="85" width="288" height="77"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tim" translatesAutoresizingMaskIntoConstraints="NO" id="OEW-mQ-Ihf">
-                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="OEW-mQ-Ihf" secondAttribute="height" multiplier="1:1" id="eSj-jV-gmk"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тим Халли" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYX-p5-cEF">
-                                                <rect key="frame" x="99.5" y="37.5" width="243.5" height="17"/>
+                                                <rect key="frame" x="85" y="30" width="203" height="17"/>
                                                 <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -231,16 +246,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EHL-dy-dI4">
-                                        <rect key="frame" x="0.0" y="199" width="343" height="91.5"/>
+                                        <rect key="frame" x="0.0" y="170" width="288" height="77"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Elizabeth" translatesAutoresizingMaskIntoConstraints="NO" id="bPO-Rj-G8f">
-                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="bPO-Rj-G8f" secondAttribute="height" multiplier="1:1" id="RnF-40-nR5"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Елизавета Максимовна" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftG-Lz-hoK">
-                                                <rect key="frame" x="99.5" y="37.5" width="243.5" height="17"/>
+                                                <rect key="frame" x="85" y="30" width="203" height="17"/>
                                                 <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -248,16 +263,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VWb-ub-Rb5">
-                                        <rect key="frame" x="0.0" y="298.5" width="343" height="91.5"/>
+                                        <rect key="frame" x="0.0" y="255" width="288" height="77"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Roman" translatesAutoresizingMaskIntoConstraints="NO" id="XlR-yf-5dE">
-                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="XlR-yf-5dE" secondAttribute="height" multiplier="1:1" id="ogd-ae-rDd"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Роман Кондрашов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gQ-QV-E9S">
-                                                <rect key="frame" x="99.5" y="37.5" width="243.5" height="17"/>
+                                                <rect key="frame" x="85" y="30" width="203" height="17"/>
                                                 <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -265,16 +280,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G8n-Ve-XfP">
-                                        <rect key="frame" x="0.0" y="398" width="343" height="91.5"/>
+                                        <rect key="frame" x="0.0" y="340" width="288" height="77"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tatyana" translatesAutoresizingMaskIntoConstraints="NO" id="fdc-Mw-jx1">
-                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fdc-Mw-jx1" secondAttribute="height" multiplier="1:1" id="7wo-AU-tIa"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Татьяна Дубова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQp-Fi-CBT">
-                                                <rect key="frame" x="99.5" y="37.5" width="243.5" height="17"/>
+                                                <rect key="frame" x="85" y="30" width="203" height="17"/>
                                                 <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -308,9 +323,13 @@
             <objects>
                 <navigationController id="k0P-lI-fdM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Маркет" image="house.fill" catalog="system" id="bzh-VV-rpB"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zhn-8O-A6i">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" alpha="0.5" contentMode="scaleToFill" id="Zhn-8O-A6i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance" backgroundEffect="systemThickMaterial">
+                            <color key="backgroundColor" red="0.45882886649999999" green="0.2826375961" blue="0.26271679999999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="dqY-Pt-tHo" kind="relationship" relationship="rootViewController" id="edZ-Qg-mLM"/>
@@ -325,24 +344,24 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="NOv-mr-0yU" userLabel="Order" customClass="OrderViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2MU-Sy-osc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш заказ создан" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocC-Fm-C1L">
-                                <rect key="frame" x="74.5" y="156" width="226" height="34"/>
+                                <rect key="frame" x="47" y="156" width="226" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fBK-9Z-sKK">
-                                <rect key="frame" x="40" y="246" width="295" height="171.5"/>
+                                <rect key="frame" x="40" y="246" width="240" height="171.5"/>
                                 <color key="tintColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="Jgj-TI-yl6"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIy-zf-w9K">
-                                <rect key="frame" x="20" y="458" width="335" height="20"/>
+                                <rect key="frame" x="20" y="458" width="280" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -377,8 +396,18 @@
                 <navigationController id="WzD-SF-Zkb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Корзина" image="basket.fill" catalog="system" id="lD5-Ui-8HK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LeB-Ah-Eb4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.45882886649999999" green="0.2826375961" blue="0.26271679999999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="lVc-O1-iIK" kind="relationship" relationship="rootViewController" id="qb9-iR-T1b"/>
@@ -393,81 +422,75 @@
             <objects>
                 <viewController id="3Kf-5o-MtJ" customClass="ProfileViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oBv-MG-heI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObH-z3-2gp">
-                                <rect key="frame" x="79.5" y="88" width="216" height="23"/>
+                                <rect key="frame" x="52" y="88" width="216" height="23"/>
                                 <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="23"/>
                                 <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ILx-m7-wHv">
-                                <rect key="frame" x="112.5" y="145" width="150" height="150"/>
+                                <rect key="frame" x="85" y="145" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="qPr-mN-anh"/>
                                     <constraint firstAttribute="width" constant="150" id="uYU-rX-W19"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yCa-5d-wfS">
-                                <rect key="frame" x="87.5" y="309" width="200" height="178"/>
+                                <rect key="frame" x="65" y="325" width="190" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="xRE-FQ-AUl">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="54"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQI-xu-qO1">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="19"/>
                                                 <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="19"/>
                                                 <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="38g-c7-a9a">
-                                                <rect key="frame" x="0.0" y="20" width="200" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfC-mG-adi">
+                                                <rect key="frame" x="0.0" y="20" width="47" height="19"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText_Medium" family="STIX Two Text" pointSize="19"/>
+                                                <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="G1x-qt-XCj"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="jgY-Tu-5c4">
-                                        <rect key="frame" x="0.0" y="62" width="200" height="54"/>
+                                        <rect key="frame" x="0.0" y="47" width="92.5" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7O-7j-Ugf">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="19"/>
                                                 <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PtG-4l-Yll">
-                                                <rect key="frame" x="0.0" y="20" width="200" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDo-Wb-2K8">
+                                                <rect key="frame" x="0.0" y="20" width="92.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText_Medium" family="STIX Two Text" pointSize="19"/>
+                                                <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="0Ga-LR-oVq"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="uhD-OP-AXy">
-                                        <rect key="frame" x="0.0" y="124" width="200" height="54"/>
+                                        <rect key="frame" x="0.0" y="94" width="58.5" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdV-Jp-NOO">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="19"/>
                                                 <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ngz-V9-tdW">
-                                                <rect key="frame" x="0.0" y="20" width="200" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgG-zw-bCH">
+                                                <rect key="frame" x="0.0" y="20" width="58.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="STIXTwoText_Medium" family="STIX Two Text" pointSize="19"/>
+                                                <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="bfg-G1-3eW"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -475,19 +498,20 @@
                         <viewLayoutGuide key="safeArea" id="Lo0-0F-oe4"/>
                         <color key="backgroundColor" red="0.94202923770000002" green="0.91393005849999998" blue="0.89017093179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="yCa-5d-wfS" firstAttribute="top" secondItem="ILx-m7-wHv" secondAttribute="bottom" constant="14" id="I6N-4U-nAf"/>
                             <constraint firstItem="ObH-z3-2gp" firstAttribute="top" secondItem="Lo0-0F-oe4" secondAttribute="top" constant="88" id="OcG-Xm-cFK"/>
                             <constraint firstItem="ObH-z3-2gp" firstAttribute="centerX" secondItem="oBv-MG-heI" secondAttribute="centerX" id="UhO-Tr-gbP"/>
                             <constraint firstItem="ILx-m7-wHv" firstAttribute="top" secondItem="ObH-z3-2gp" secondAttribute="bottom" constant="34" id="gR1-Qf-wFG"/>
                             <constraint firstItem="ILx-m7-wHv" firstAttribute="centerX" secondItem="oBv-MG-heI" secondAttribute="centerX" id="ixA-0R-aFI"/>
-                            <constraint firstItem="yCa-5d-wfS" firstAttribute="centerX" secondItem="oBv-MG-heI" secondAttribute="centerX" id="ypp-mb-xpM"/>
+                            <constraint firstItem="Lo0-0F-oe4" firstAttribute="trailing" secondItem="yCa-5d-wfS" secondAttribute="trailing" constant="65" id="uJa-fr-ul3"/>
+                            <constraint firstItem="yCa-5d-wfS" firstAttribute="leading" secondItem="Lo0-0F-oe4" secondAttribute="leading" constant="65" id="wwI-j4-cbT"/>
+                            <constraint firstItem="yCa-5d-wfS" firstAttribute="top" secondItem="ILx-m7-wHv" secondAttribute="bottom" constant="30" id="zAr-4k-4j4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Профиль" image="person.fill" catalog="system" id="CfM-Md-KUL"/>
                     <connections>
-                        <outlet property="emailTextField" destination="ngz-V9-tdW" id="RXr-gh-Ivb"/>
-                        <outlet property="nameTextField" destination="38g-c7-a9a" id="plI-IT-dNf"/>
-                        <outlet property="surnameTextField" destination="PtG-4l-Yll" id="5H2-05-bDL"/>
+                        <outlet property="emailLabel" destination="dgG-zw-bCH" id="lXf-WC-nx7"/>
+                        <outlet property="nameLabel" destination="FfC-mG-adi" id="FP1-gs-ngj"/>
+                        <outlet property="surnameLabel" destination="nDo-Wb-2K8" id="24L-ir-6Y2"/>
                         <outlet property="userImage" destination="ILx-m7-wHv" id="QAS-IY-KHO"/>
                         <outlet property="welcomeLabel" destination="ObH-z3-2gp" id="hlx-xV-Civ"/>
                     </connections>
@@ -522,44 +546,44 @@
             <objects>
                 <viewController id="91N-kr-02G" customClass="LoginViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P7v-DB-BBp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqf-Br-Or1">
-                                <rect key="frame" x="136" y="153" width="103" height="45"/>
+                                <rect key="frame" x="108.5" y="153" width="103" height="45"/>
                                 <fontDescription key="fontDescription" name="STIXTwoText_Bold" family="STIX Two Text" pointSize="45"/>
                                 <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Wld-kH-c0Q">
-                                <rect key="frame" x="16" y="255" width="343" height="157"/>
+                                <rect key="frame" x="16" y="205.5" width="288" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etn-2F-eX9">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="25"/>
                                         <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="25"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Ваш e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bB-un-v4h">
-                                        <rect key="frame" x="0.0" y="38" width="343" height="34"/>
+                                        <rect key="frame" x="0.0" y="38" width="288" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57P-VE-XuM">
-                                        <rect key="frame" x="0.0" y="85" width="343" height="25"/>
+                                        <rect key="frame" x="0.0" y="85" width="288" height="25"/>
                                         <fontDescription key="fontDescription" name="STIXTwoText" family="STIX Two Text" pointSize="25"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.27450980390000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Ваш пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jiy-aU-toQ">
-                                        <rect key="frame" x="0.0" y="123" width="343" height="34"/>
+                                        <rect key="frame" x="0.0" y="123" width="288" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4Z-EE-7KS">
-                                <rect key="frame" x="117.5" y="494" width="140" height="38"/>
+                                <rect key="frame" x="90" y="444.5" width="140" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="a3y-cI-CPs"/>
                                 </constraints>
@@ -601,18 +625,18 @@
             <objects>
                 <viewController id="lVc-O1-iIK" customClass="CartViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yez-iw-6x6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pk5-WB-y8P">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="471"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="59" id="Gj7-Kd-4UK" customClass="CartViewCell" customModule="NewMarketApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="59"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gj7-Kd-4UK" id="Eoa-LN-6Ob">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="DBS-PT-1U9">
@@ -640,10 +664,11 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yZK-K3-VB4">
-                                                    <rect key="frame" x="193" y="4.5" width="168.5" height="50"/>
+                                                    <rect key="frame" x="138" y="4.5" width="168.5" height="50"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEl-7u-SMg">
                                                             <rect key="frame" x="0.0" y="0.0" width="32" height="50"/>
+                                                            <color key="tintColor" red="0.45882886649999999" green="0.2826375961" blue="0.26271679999999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" title="-"/>
                                                             <connections>
@@ -657,6 +682,7 @@
                                                         </textField>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ji-nU-Azc">
                                                             <rect key="frame" x="79" y="0.0" width="34.5" height="50"/>
+                                                            <color key="tintColor" red="0.45882886649999999" green="0.2826375961" blue="0.26271679999999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" title="+"/>
                                                             <connections>
@@ -702,7 +728,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWK-Is-5D3">
-                                <rect key="frame" x="134.5" y="556" width="106" height="36.5"/>
+                                <rect key="frame" x="107" y="457" width="106" height="36.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Заказать">
@@ -718,16 +744,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-Gf-f0v">
-                                <rect key="frame" x="38" y="504" width="299" height="27"/>
+                                <rect key="frame" x="38" y="405" width="244" height="27"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFt-Dr-4jR">
-                                        <rect key="frame" x="0.0" y="0.0" width="133" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFt-Dr-4jR">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="27"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-hC-FNm">
-                                        <rect key="frame" x="221" y="0.0" width="78" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИТОГО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-hC-FNm">
+                                        <rect key="frame" x="166" y="0.0" width="78" height="27"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -766,7 +792,7 @@
             <objects>
                 <collectionViewController modalPresentationStyle="fullScreen" id="dqY-Pt-tHo" customClass="CategoriesCollectionViewController" customModule="NewMarketApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5ak-gd-YWg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lg5-4G-QX6">
@@ -777,7 +803,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Kfj-m2-7pf" customClass="CollectionViewCell" customModule="NewMarketApp" customModuleProvider="target">
-                                <rect key="frame" x="87.5" y="5" width="200" height="200"/>
+                                <rect key="frame" x="60" y="5" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dgx-Ob-ohn">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -824,6 +850,7 @@
         <image name="Tim" width="640" height="640"/>
         <image name="apple" width="1080" height="1080"/>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
+        <image name="cart.circle.fill" catalog="system" width="128" height="123"/>
         <image name="cart.fill.badge.plus" catalog="system" width="128" height="106"/>
         <image name="checkmark.seal" catalog="system" width="128" height="124"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
