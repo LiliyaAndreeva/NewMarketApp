@@ -10,7 +10,7 @@ import UIKit
 class CartViewController: UIViewController {
     
     var products: [Product] = []
-    var productsByName: [String: Product] = [:]
+    var productsCount: [Product: Int] = [:]
     var countInCart = 0
     
     var user: User!
@@ -36,11 +36,12 @@ class CartViewController: UIViewController {
         products = Basket.shared.cartProducts
         mainTable.reloadData()
         
-        for item in products {
-            if productsByName[item.productName] != nil {
-                countInCart += 1
+        // Создание словаря Продукт - количество
+        for product in products {
+            if let productCount = productsCount[product] {
+                productsCount.updateValue(productCount + 1, forKey: product)
             } else {
-                productsByName[item.productName] = item
+                productsCount[product] = 1
             }
         }
     }
@@ -54,19 +55,23 @@ class CartViewController: UIViewController {
 // MARK: - UITableViewDataSourse
 extension CartViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        productsByName.count
+        productsCount.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CartViewCell else { return UITableViewCell() }
        
-        let uniqProducts = Array(productsByName.values)
+        let uniqProducts = productsCount.map{ $0.key }
         let product = uniqProducts[indexPath.row]
                 
         cell.productLabel.text = product.productName
+//        cell.priceLabel.text = "\(product.price * Double(productsCount[product] ?? 0))"
+        let productPrice = product.price * Double(productsCount[product] ?? 0)
+        cell.priceOfProductLabel.text = String(format: "%.2f", productPrice) + " ₽"
+
+        cell.productQuantityTF.text = String(productsCount[product] ?? 0)
         cell.imageView?.image = UIImage(named: product.imageName)
-        cell.priceLabel.text = String(product.price)
-        cell.productQuantityTF.text = String(countInCart)
+        
         return cell
     }
     
