@@ -118,8 +118,7 @@ class Basket {
     static let shared = Basket()
     
    // var selectedProduct: Product?
-    var cartProducts: [Product] = []
-    var intermediaryArray: [Product] = []
+    var cartInfo: [Product: Int] = [:]
     
     private init() {}
 }

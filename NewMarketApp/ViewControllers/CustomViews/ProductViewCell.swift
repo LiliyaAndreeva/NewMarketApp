@@ -5,8 +5,6 @@ import UIKit
 final class ProductViewCell: UITableViewCell {
     var product: Product!
     
-    private var count = 0
-    
     @IBOutlet weak var productsNumberTF: UITextField!
     @IBOutlet weak var productImage: UIImageView!
     
@@ -25,7 +23,7 @@ final class ProductViewCell: UITableViewCell {
     }
     
     @IBAction func addOrRemoveProductFromCart() {
-        Basket.shared.cartProducts = Basket.shared.intermediaryArray
+        let count = Basket.shared.cartInfo[product] ?? 0
         addToCartHandler?(count)
     }
     
@@ -33,18 +31,18 @@ final class ProductViewCell: UITableViewCell {
         
         switch sender {
         case increment:
-            count += 1
-            Basket.shared.intermediaryArray.append(product)
-            
+            Basket.shared.cartInfo[product, default: 0] += 1
         default:
-            if count > 0 {
-                count -= 1
-            }
-            if let index = Basket.shared.intermediaryArray.firstIndex(where: { $0.productId == product.productId }) {
-                Basket.shared.intermediaryArray.remove(at: index)
+            if Basket.shared.cartInfo[product] != nil {
+                Basket.shared.cartInfo[product, default: 1] -= 1
+            } else {
+                Basket.shared.cartInfo[product] = nil
             }
         }
-        productsNumberTF.text = String(count)
+        
+        if let count = Basket.shared.cartInfo[product] {
+            productsNumberTF.text = String(count)
+        }
     }
         
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -3,13 +3,14 @@
 import UIKit
 
 protocol CartCellDelegate {
-    func getTotalSum(_ cell: CartViewCell)
+    func productAmountChanged()
 }
 
 final class CartViewCell: UITableViewCell {
-    var product: Product!
+    var product: Product! {
+        didSet { updateData() }
+    }
     var finaResult = 0.0
-    var cartTable: UITableView!
     
     @IBOutlet weak var productLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -20,18 +21,12 @@ final class CartViewCell: UITableViewCell {
 
     @IBOutlet weak var productQuantityTF: UITextField!
     
-    private var productsCount = [Product: Int]()
-    private var count = 1
-    private var sum = 0.0
-    
     var delegate: CartCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         totalOneProductsPriceLabel.text = priceLabel.text
-        setupTF()
-        calculateАmount()
-        delegate?.getTotalSum(self)
+        productQuantityTF.endEditing(true)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,17 +37,16 @@ final class CartViewCell: UITableViewCell {
         
         switch sender {
         case minusButton:
-            if count > 0 {
-                count -= 1
+            if Basket.shared.cartInfo[product] != nil {
+                Basket.shared.cartInfo[product, default: 1] -= 1
+            } else {
+                Basket.shared.cartInfo[product] = nil
             }
-            Basket.shared.intermediaryArray.append(product)
-        default:
-            count += 1
-            if let index = Basket.shared.intermediaryArray.firstIndex(where: { $0.productId == product.productId }) {
-                Basket.shared.intermediaryArray.remove(at: index)
-            }
+        default: // plus button
+            Basket.shared.cartInfo[product, default: 0] += 1
         }
-        calculateАmount()
+        updateData()
+        delegate?.productAmountChanged()
         print(finaResult)
     }
 }
@@ -60,40 +54,11 @@ final class CartViewCell: UITableViewCell {
 // MARK: - extensions
 extension CartViewCell {
     
-    private func calculateАmount(){
-      
-        getDictionaryProductsCount()
+    private func updateData() {
+        let productCount = Basket.shared.cartInfo[product] ?? 0
+        let sum = product.price * Double(productCount)
         totalOneProductsPriceLabel.text = String(format: "%.2f", sum) + " ₽"
-        productQuantityTF.text = "\(count)"
+        productQuantityTF.text = "\(productCount)"
     }
-    
-    private func getDictionaryProductsCount(){
-        
-        // Создание словаря Продукт - количество
-        for product in Basket.shared.cartProducts {
-            if let productCount = productsCount[product] {
-                productsCount.updateValue(productCount + 1, forKey: product)
-                sum = product.price * Double(count)
-            } else {
-                productsCount[product] = 1
-            }
-        }
-    }
-}
 
-// MARK: - UITextFieldDelegate
-extension CartViewCell: UITextFieldDelegate {
-    
-    private func setupTF() {
-        productQuantityTF.delegate = self
-        productQuantityTF.endEditing(true)
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        if (0..<999).contains(Float(textField.text ?? "") ?? 0) {
-            
-            count = Int(textField.text ?? "") ?? 1
-            calculateАmount()
-        }
-    }
 }

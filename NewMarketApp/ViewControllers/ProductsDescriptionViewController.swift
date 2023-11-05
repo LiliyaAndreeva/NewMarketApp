@@ -24,7 +24,7 @@ final class ProductsDescriptionViewController: UIViewController {
     }
   
     @IBAction func addToCartDidTapped(_ sender: UIButton) {
-        Basket.shared.cartProducts.append(product)
+        Basket.shared.cartInfo[product, default: 0] += 1
         showAlert(with: "Товар успешно добавлен в корзину", and: "Вы можете перейти к оформлению заказа или продолжить покупки")
     }
     private func showAlert(with title: String, and message: String) {
