@@ -37,17 +37,18 @@ final class CartViewCell: UITableViewCell {
         
         switch sender {
         case minusButton:
-            if Basket.shared.cartInfo[product] != nil {
-                Basket.shared.cartInfo[product, default: 1] -= 1
-            } else {
-                Basket.shared.cartInfo[product] = nil
+            if Basket.shared.cartInfo[product] ?? 0 > 0 {
+                if Basket.shared.cartInfo[product] != nil {
+                    Basket.shared.cartInfo[product, default: 1] -= 1
+                } else {
+                    Basket.shared.cartInfo[product] = nil
+                }
             }
         default: // plus button
             Basket.shared.cartInfo[product, default: 0] += 1
         }
         updateData()
         delegate?.productAmountChanged()
-        print(finaResult)
     }
 }
 
