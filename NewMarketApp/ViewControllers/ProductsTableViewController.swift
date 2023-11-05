@@ -3,9 +3,6 @@
 import UIKit
 
 final class ProductsTableViewController: UITableViewController {
-    
-    
-    
     var products: [Product]!
     
     override func viewDidLoad() {
@@ -20,14 +17,12 @@ final class ProductsTableViewController: UITableViewController {
         descriptionVC?.product = selectedProduct
     }
     
-    
     @IBAction func cartButtonPressed(_ sender: UIButton) {
         showAlert(
             title: "Товар успешно добавлен в корзину",
             message: "Вы можете перейти к оформлению заказа или продолжить покупки"
         )
     }
-    
 }
 
 extension ProductsTableViewController {

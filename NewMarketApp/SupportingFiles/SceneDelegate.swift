@@ -1,9 +1,4 @@
-//
-//  SceneDelegate.swift
-//  NewMarketApp
-//
-//  Created by Лилия Андреева on 29.10.2023.
-//
+//  Created by Motherlode Team on 29.10.23.
 
 import UIKit
 

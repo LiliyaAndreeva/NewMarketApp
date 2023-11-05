@@ -1,35 +1,25 @@
-//
-//  CartViewController.swift
-//  NewMarketApp
-//
-//  Created by Лилия Андреева on 29.10.2023.
-//
+//  Created by Motherlode Team on 29.10.23.
 
 import UIKit
 
-
 final class CartViewController: UIViewController {
     
-    var products: [Product] = []
-    var productsCount: [Product: Int] = [:]
+    var products = [Product]()
+    var productsCount = [Product: Int]()
     var countInCart = 0
     
     var user: User!
     
-
-    
-    @IBOutlet weak var mainTable: UITableView!
+    @IBOutlet weak var cartTable: UITableView!
     @IBOutlet weak var bottomOrder: UIButton!
     
     @IBOutlet weak var totalSumLabel: UILabel!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Styles.secondaryBrown
         bottomOrder.backgroundColor = Styles.primaryBrown
         bottomOrder.clipsToBounds = true
-       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,19 +34,15 @@ final class CartViewController: UIViewController {
         products = Basket.shared.cartProducts
         productsCount.removeAll()
         getDictionaryProductsCount()
-        mainTable.reloadData()
+        cartTable.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         bottomOrder.layer.cornerRadius = bottomOrder.bounds.height / 2
     }
-    
-
 }
     
-
-
 // MARK: - UITableViewDataSourse
 extension CartViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,19 +57,22 @@ extension CartViewController: UITableViewDataSource {
         
         cell.productLabel.text = product.productName
         cell.priceLabel.text = "\(product.price) ₽"
+        
         let productPrice = product.price * Double(productsCount[product] ?? 0)
         cell.totalOneProductsPriceLabel.text = String(format: "%.2f", productPrice) + " ₽"
 
         cell.productQuantityTF.text = String(productsCount[product] ?? 0)
         cell.imageView?.image = UIImage(named: product.imageName)
         
-
+        let finaResult = products.map { $0.price }.reduce(0, +)
+        totalSumLabel.text = String(format: "%.2f", finaResult) + " ₽"
+        
+        cell.product = product
+        cell.cartTable = cartTable
+        cell.finaResult = finaResult
         
         cell.contentView.backgroundColor = .white
-        
         cell.delegate = self
-
-        
         return cell
     }
     
@@ -92,7 +81,6 @@ extension CartViewController: UITableViewDataSource {
         view.endEditing(true)
     }
 }
-
 
 // MARK: - UITableViewDelegate
 extension CartViewController: UITableViewDelegate{
@@ -105,7 +93,6 @@ extension CartViewController: UITableViewDelegate{
         let cellWidth = tableViewWidth * 0.15 // ячейка будет занимать % ширины таблицы
         return cellWidth
     }
-
 }
 
 extension CartViewController {
@@ -128,9 +115,6 @@ extension CartViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
     } //убирает клавиатуру
-    
-
-    
 }
 
 extension CartViewController: CartCellDelegate {
@@ -143,7 +127,3 @@ extension CartViewController: CartCellDelegate {
         totalSumLabel.text = String(format: "%.2f", total) + "₽"
     }
 }
-
-
-
-

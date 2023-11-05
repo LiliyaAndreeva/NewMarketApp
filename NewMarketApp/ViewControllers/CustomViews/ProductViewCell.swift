@@ -1,9 +1,4 @@
-//
-//  CustomProductTableViewCell.swift
-//  NewMarketApp
-//
-//  Created by Admin on 31/10/2023.
-//7
+//  Created by Motherlode Team on 29.10.23.
 
 import UIKit
 
