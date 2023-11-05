@@ -15,10 +15,12 @@ final class TabBarViewController: UITabBarController {
         let appearance = UITabBarAppearance()
         tabBar.standardAppearance = appearance
         tabBar.scrollEdgeAppearance = appearance
-        
+        self.tabBar.layer.cornerRadius = self.tabBar.frame.size.height / 1
+        self.tabBar.clipsToBounds = true
+
         transferData()
     }
-    
+
     private func transferData() {
         guard let viewControllers else { return }
         
