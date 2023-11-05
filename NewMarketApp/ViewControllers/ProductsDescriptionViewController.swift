@@ -2,12 +2,8 @@
 
 import UIKit
 
-
 final class ProductsDescriptionViewController: UIViewController {
-    
-    
     var product: Product!
-
     
     @IBOutlet weak var imageOfProduct: UIImageView!
     @IBOutlet weak var descriptLabel: UILabel!

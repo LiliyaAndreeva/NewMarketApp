@@ -111,7 +111,6 @@
 		72C7C70F2AEE6D50007DA0D2 /* NewMarketApp */ = {
 			isa = PBXGroup;
 			children = (
-				72A0AEC62AF0F98A0064AE98 /* CustomViews */,
 				72A0AEC12AEEAE070064AE98 /* Services */,
 				30D3B6CD2AEE9FBC008A715D /* Models */,
 				72C7C7242AEE6DE0007DA0D2 /* ViewControllers */,
@@ -125,9 +124,10 @@
 		72C7C7242AEE6DE0007DA0D2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				72A0AEC62AF0F98A0064AE98 /* CustomViews */,
 				72A0AEA92AEE6FD50064AE98 /* LoginViewController.swift */,
-				72A0AEB32AEE765F0064AE98 /* ProfileViewController.swift */,
 				72A0AEB52AEEA86C0064AE98 /* TabBarViewController.swift */,
+				72A0AEB32AEE765F0064AE98 /* ProfileViewController.swift */,
 				72A0AEB72AEEA8A40064AE98 /* CartViewController.swift */,
 				72A0AEB92AEEA92C0064AE98 /* CategoriesCollectionViewController.swift */,
 				72A0AEBB2AEEA9600064AE98 /* ProductsTableViewController.swift */,

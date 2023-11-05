@@ -1,9 +1,4 @@
-//
-//  CustomTableViewCell.swift
-//  NewMarketApp
-//
-//  Created by Лилия Андреева on 31.10.2023.
-//
+//  Created by Motherlode Team on 29.10.23.
 
 import UIKit
 
@@ -11,8 +6,10 @@ protocol CartCellDelegate {
     func getTotalSum(_ cell: CartViewCell)
 }
 
-
 final class CartViewCell: UITableViewCell {
+    var product: Product!
+    var finaResult = 0.0
+    var cartTable: UITableView!
     
     @IBOutlet weak var productLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -20,7 +17,7 @@ final class CartViewCell: UITableViewCell {
     
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var plusButton: UIButton!
-    
+
     @IBOutlet weak var productQuantityTF: UITextField!
     
     private var productsCount = [Product: Int]()
@@ -48,11 +45,15 @@ final class CartViewCell: UITableViewCell {
             if count > 0 {
                 count -= 1
             }
+            Basket.shared.intermediaryArray.append(product)
         default:
             count += 1
-            
+            if let index = Basket.shared.intermediaryArray.firstIndex(where: { $0.productId == product.productId }) {
+                Basket.shared.intermediaryArray.remove(at: index)
+            }
         }
         calculateАmount()
+        print(finaResult)
     }
 }
 
