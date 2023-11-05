@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91N-kr-02G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91N-kr-02G">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -396,7 +396,7 @@
                 <navigationController id="WzD-SF-Zkb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Корзина" image="basket.fill" catalog="system" id="lD5-Ui-8HK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LeB-Ah-Eb4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -716,9 +716,9 @@
                                             <outlet property="minusButton" destination="oEl-7u-SMg" id="n5X-3z-B1u"/>
                                             <outlet property="plusButton" destination="4Ji-nU-Azc" id="Oft-AI-knA"/>
                                             <outlet property="priceLabel" destination="5cN-Pi-mgT" id="hdf-3g-9t4"/>
-                                            <outlet property="priceOfProductLabel" destination="1AS-VZ-Paa" id="9T1-gG-PBe"/>
                                             <outlet property="productLabel" destination="cok-Zr-eQv" id="Wjk-XX-HsH"/>
                                             <outlet property="productQuantityTF" destination="CGl-2N-sCc" id="HrP-fk-py8"/>
+                                            <outlet property="totalOneProductsPriceLabel" destination="1AS-VZ-Paa" id="9T1-gG-PBe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -7,29 +7,34 @@
 
 import UIKit
 
-class CartViewCell: UITableViewCell {
+protocol CartCellDelegate {
+    func getTotalSum(_ cell: CartViewCell)
+}
+
+
+final class CartViewCell: UITableViewCell {
     
     @IBOutlet weak var productLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    
-    @IBOutlet weak var priceOfProductLabel: UILabel!
+    @IBOutlet weak var totalOneProductsPriceLabel: UILabel!
     
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var plusButton: UIButton!
     
     @IBOutlet weak var productQuantityTF: UITextField!
     
+    private var productsCount = [Product: Int]()
     private var count = 1
     private var sum = 0.0
     
-    var productsCount = [Product: Int]()
-    
+    var delegate: CartCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        priceOfProductLabel.text = priceLabel.text
+        totalOneProductsPriceLabel.text = priceLabel.text
         setupTF()
         calculateАmount()
+        delegate?.getTotalSum(self)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -55,7 +60,15 @@ class CartViewCell: UITableViewCell {
 extension CartViewCell {
     
     private func calculateАmount(){
+      
+        getDictionaryProductsCount()
+        totalOneProductsPriceLabel.text = String(format: "%.2f", sum) + " ₽"
+        productQuantityTF.text = "\(count)"
+    }
+    
+    private func getDictionaryProductsCount(){
         
+        // Создание словаря Продукт - количество
         for product in Basket.shared.cartProducts {
             if let productCount = productsCount[product] {
                 productsCount.updateValue(productCount + 1, forKey: product)
@@ -64,8 +77,6 @@ extension CartViewCell {
                 productsCount[product] = 1
             }
         }
-        priceOfProductLabel.text = String(format: "%.2f", sum) + " ₽"
-        productQuantityTF.text = "\(count)"
     }
 }
 
