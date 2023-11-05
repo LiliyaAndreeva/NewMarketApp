@@ -17,6 +17,8 @@ final class ProductViewCell: UITableViewCell {
     @IBOutlet weak var decrement: UIButton!
     
     @IBOutlet weak var quantityTextField: UITextField!
+    
+    var addToCartHandler: ((Int) -> Void)?
         
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +26,7 @@ final class ProductViewCell: UITableViewCell {
     
     @IBAction func addOrRemoveProductFromCart() {
         Basket.shared.cartProducts = Basket.shared.intermediaryArray
+        addToCartHandler?(count)
     }
     
     @IBAction func addRemoveProduct(_ sender: UIButton) {

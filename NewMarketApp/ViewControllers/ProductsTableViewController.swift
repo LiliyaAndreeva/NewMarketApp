@@ -16,13 +16,6 @@ final class ProductsTableViewController: UITableViewController {
         let selectedProduct = products[indexPath.row]
         descriptionVC?.product = selectedProduct
     }
-    
-    @IBAction func cartButtonPressed(_ sender: UIButton) {
-        showAlert(
-            title: "Товар успешно добавлен в корзину",
-            message: "Вы можете перейти к оформлению заказа или продолжить покупки"
-        )
-    }
 }
 
 extension ProductsTableViewController {
@@ -48,7 +41,19 @@ extension ProductsTableViewController {
         cell.imageView?.image = UIImage(named: product.imageName)
         cell.contentView.backgroundColor = view.backgroundColor
         cell.product = product
-        
+        cell.addToCartHandler = { [weak self] count in
+            if count == 0 {
+                self?.showAlert(
+                    title: "Товар не добавлен в корзину",
+                    message: "Пожалуйста, выберите нужное количество продукта"
+                )
+            } else {
+                self?.showAlert(
+                    title: "Товар успешно добавлен в корзину",
+                    message: "Вы можете перейти к оформлению заказа или продолжить покупки"
+                )
+            }
+        }
         return cell
     }
 }

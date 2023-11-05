@@ -84,7 +84,6 @@
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="addOrRemoveProductFromCart" destination="4Yq-r4-5Z2" eventType="touchUpInside" id="tvS-lj-Twc"/>
-                                                        <action selector="cartButtonPressed:" destination="srZ-Uo-rZW" eventType="touchUpInside" id="zou-2v-7UV"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
